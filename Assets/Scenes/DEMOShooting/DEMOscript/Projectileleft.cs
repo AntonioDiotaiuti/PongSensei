@@ -1,7 +1,6 @@
-
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectileleft : MonoBehaviour
 {
     public float speed = 10f;
     public float lifetime = 2f;
@@ -13,6 +12,6 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 }

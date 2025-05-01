@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 1660929396}
   - component: {fileID: 1660929395}
   - component: {fileID: 1660929399}
+  - component: {fileID: 1660929400}
   m_Layer: 0
   m_Name: Trialplayer
   m_TagString: Untagged
@@ -543,6 +544,21 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6260262397705068661, guid: 85735299cd5243d4096dbadd33778bc4, type: 3}
   firePoint: {fileID: 356599834}
   projectileSpeed: 10
+--- !u!114 &1660929400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660929394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccf9fb0686b3c34290a08a830198929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laneOffset: 2
+  currentLane: 1
+  horizontalSpeed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

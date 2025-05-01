@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour
+using UnityEngine;
+
+public class PlayerShootingleft : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
@@ -21,8 +23,7 @@ public class PlayerShooting : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = Vector3.right * projectileSpeed;
+            rb.linearVelocity = Vector3.left * projectileSpeed;
         }
     }
 }
-
