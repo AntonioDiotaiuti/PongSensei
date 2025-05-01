@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clessidra_0: -2897319243059265034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

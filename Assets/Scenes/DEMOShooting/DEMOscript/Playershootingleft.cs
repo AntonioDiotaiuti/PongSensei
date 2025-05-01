@@ -6,11 +6,12 @@ public class PlayerShootingleft : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 10f;
+    [SerializeField]public float projectileSpeed = 10f;
+    private bool hasAmmo = true;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.L) && hasAmmo)
         {
             Shoot();
         }
@@ -25,5 +26,10 @@ public class PlayerShootingleft : MonoBehaviour
         {
             rb.linearVelocity = Vector3.left * projectileSpeed;
         }
+        hasAmmo = false;
+    }
+    public void Reload()
+    {
+            hasAmmo = true;
     }
 }

@@ -4,11 +4,12 @@ public class PlayerShootingright : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 10f;
+    [SerializeField]public float projectileSpeed = 10f;
+    private bool hasAmmo = true;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.R)&& hasAmmo)
         {
             Shoot();
         }
@@ -23,6 +24,12 @@ public class PlayerShootingright : MonoBehaviour
         {
             rb.linearVelocity = Vector3.right * projectileSpeed;
         }
+        hasAmmo = false;
+    }
+    public void Reload()
+    {
+        hasAmmo = true;
     }
 }
+
 
