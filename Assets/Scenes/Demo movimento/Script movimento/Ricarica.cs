@@ -12,7 +12,17 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Puoi personalizzare: se colpisce qualcosa, distruggilo
+        if (collision.CompareTag("Player1"))
+        {
+            GameManager.Instance.DeclareVictory("Player2");
+            Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("Player2"))
+        {
+            GameManager.Instance.DeclareVictory("Player1");
+            Destroy(collision.gameObject);
+        }
+
         Destroy(gameObject);
     }
 }

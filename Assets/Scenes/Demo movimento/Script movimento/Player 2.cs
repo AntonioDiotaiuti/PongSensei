@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player2LaneMovement : MonoBehaviour
 {
     [Header("Movimento Verticale")]
-    public float laneOffset = 2f; // Distanza tra le corsie
-    public int currentLane = 1;   // 0 = basso, 1 = centro, 2 = alto
+    public float laneOffset = 2f; 
+    public int currentLane = 1;   
 
     [Header("Movimento Orizzontale")]
     [SerializeField] private float horizontalSpeed = 5f;
