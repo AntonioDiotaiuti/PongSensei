@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1471529853741297139}
   - component: {fileID: 8422326584193129075}
   m_Layer: 0
-  m_Name: Proiettile
+  m_Name: Proiettile va a destra
   m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
