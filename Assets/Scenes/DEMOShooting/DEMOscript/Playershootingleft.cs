@@ -1,12 +1,10 @@
 using UnityEngine;
 
-using UnityEngine;
-
 public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    [SerializeField]public float projectileSpeed = 10f;
+    [SerializeField] public float projectileSpeed = 10f;
     private bool hasAmmo = true;
 
     void Update()
@@ -28,8 +26,11 @@ public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
         }
         hasAmmo = false;
     }
+
     public void Reload()
     {
-            hasAmmo = true;
+        hasAmmo = true;
     }
+
+    public bool HasAmmo => hasAmmo;
 }
