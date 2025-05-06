@@ -9,15 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783213910218951100}
-  - component: {fileID: 7397504165179559888}
   - component: {fileID: 8691919158155611855}
   - component: {fileID: 917692971005387337}
   - component: {fileID: 3645321757048324062}
   - component: {fileID: 8642110055737433583}
   - component: {fileID: 7058794351824967035}
+  - component: {fileID: 5738866467484672733}
   m_Layer: 0
   m_Name: Player 2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,21 +38,6 @@ Transform:
   - {fileID: 4803049382447557810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7397504165179559888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4594315789103833561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0dafdce09423c64f973ac4ec6100afd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laneOffset: 2
-  currentLane: 1
-  horizontalSpeed: 5
 --- !u!212 &8691919158155611855
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,6 +187,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5738866467484672733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594315789103833561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccf9fb0686b3c34290a08a830198929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArenaBounds: {fileID: 0}
+  PlayerNumber: 2
+  laneOffset: 2
+  currentLane: 1
+  horizontalSpeed: 5
 --- !u!1 &7668364371020698538
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 7668364371020698538}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.67, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
