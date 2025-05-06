@@ -6,7 +6,7 @@ public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
     public GameObject projectilePrefab;
     public Transform firePoint;
     public float projectileSpeed = 10f;
-    public float reloadTime = 3f; // tempo richiesto per ricaricare da fermi
+    public float reloadTime = 3f; 
     public Image reloadBarUI;     // da assegnare nell'Inspector
 
     private bool hasAmmo = true;
