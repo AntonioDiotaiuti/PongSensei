@@ -26,7 +26,7 @@ public class MeleeParry : MonoBehaviour
     {
         if (!isActive) return;
 
-        if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Proiettile"))
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null)

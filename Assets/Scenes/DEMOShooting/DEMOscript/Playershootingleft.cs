@@ -5,7 +5,7 @@ public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
     public GameObject projectilePrefab;
     public Transform firePoint;
     [SerializeField] public float projectileSpeed = 10f;
-    private bool hasAmmo = true;
+    [SerializeField] private bool hasAmmo = true;
 
     void Update()
     {
