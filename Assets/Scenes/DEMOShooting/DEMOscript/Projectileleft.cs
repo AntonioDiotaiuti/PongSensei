@@ -3,12 +3,9 @@ using UnityEngine;
 public class Projectileleft : MonoBehaviour
 {
     [SerializeField] public float speed = 10f;
-    [SerializeField] public float lifetime = 2f;
 
-    void Start()
-    {
-        Destroy(gameObject, lifetime); // Distrugge il proiettile dopo 'lifetime' secondi
-    }
+
+
 
     void Update()
     {
@@ -28,19 +25,4 @@ public class Projectileleft : MonoBehaviour
         // Distrugge il proiettile dopo aver colpito Player1
         Destroy(gameObject);
     }
-
-    // Aggiungiamo una funzione per prevenire la distruzione immediata del proiettile 
-    // quando è in contatto con il proprio collider o con altri oggetti
-    void OnCollisionEnter(Collision collision)
-    {
-        // Ignora collisioni con oggetti che non sono Player1
-        if (collision.collider.CompareTag("Player1"))
-        {
-            // Qui puoi eseguire ulteriori logiche se necessario, come l'applicazione di danni
-            Destroy(collision.gameObject); // Distrugge Player1
-            Destroy(gameObject); // Distrugge il proiettile
-        }
-    }
 }
-
-

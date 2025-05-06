@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ScriptProiettile.asset.unity.meta
 guid: f003a4720d994b04bbc088fbe08863c1
+========
+guid: cb22d6409fe402246a426f559abbf252
+>>>>>>>> d1e0a3d71e98f5fe5603895c2869d116ce3aecfa:Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

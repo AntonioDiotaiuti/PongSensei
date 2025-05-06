@@ -7,9 +7,10 @@ TagManager:
   - Ammo
   - Player1
   - Player2
-  - Enemy
-  - LimiteArena
-  - Proiettile
+  - Parry
+  - MapAmmo
+  - Ammo2
+  - Parry2
   layers:
   - Default
   - TransparentFX

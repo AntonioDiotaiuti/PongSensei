@@ -3,12 +3,7 @@ using UnityEngine;
 public class Projectileright : MonoBehaviour
 {
     [SerializeField] public float speed = 10f;
-    [SerializeField] public float lifetime = 2f;
 
-    void Start()
-    {
-        Destroy(gameObject, lifetime);
-    }
 
     void Update()
     {

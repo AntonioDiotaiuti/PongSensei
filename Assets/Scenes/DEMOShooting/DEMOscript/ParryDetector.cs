@@ -9,7 +9,7 @@ public class ParryDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Projectile") && !projectilesInRange.Contains(other.gameObject))
+        if (other.CompareTag("Proiettile") && !projectilesInRange.Contains(other.gameObject))
         {
             projectilesInRange.Add(other.gameObject);
         }
@@ -17,7 +17,7 @@ public class ParryDetector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Proiettile"))
         {
             projectilesInRange.Remove(other.gameObject);
         }
