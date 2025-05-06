@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlayerLaneMovement : MonoBehaviour
@@ -8,6 +9,10 @@ public class PlayerLaneMovement : MonoBehaviour
 
     [Header("Movimento Orizzontale")]
     [SerializeField] private float horizontalSpeed = 5f;
+    public BoxCollider ArenaBounds;
+
+    private float minX;
+    private float maxX;
 
     private Vector3 startPosition;
 
@@ -44,6 +49,16 @@ public class PlayerLaneMovement : MonoBehaviour
         }
 
         transform.Translate(Vector3.right * horizontalInput * horizontalSpeed * Time.deltaTime);
+        var actualPos = transform.position;
+        if (transform.position.x < ArenaBounds.bounds.min.x)
+        {
+            actualPos.x = ArenaBounds.bounds.min.x;
+            transform.position = actualPos;
+        } else if (transform.position.x > ArenaBounds.bounds.max.x)
+        {
+            actualPos.x = ArenaBounds.bounds.max.x;
+            transform.position = actualPos;
+        }
     }
 
     void UpdateLanePosition()
