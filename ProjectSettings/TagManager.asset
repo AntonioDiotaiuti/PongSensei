@@ -8,6 +8,8 @@ TagManager:
   - Player1
   - Player2
   - Enemy
+  - LimiteArena
+  - Proiettile
   layers:
   - Default
   - TransparentFX
