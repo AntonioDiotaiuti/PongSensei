@@ -85,15 +85,7 @@ public class PlayerLaneMovement : MonoBehaviour
         }
         
 
-        // Freccette controller (← / →)
-        horizontalInput += Input.GetAxis(horizontalAxisPlayer);
-        if (horizontalInput != 0.0f)
-        {
-            Debug.Log("INPUT -> "+horizontalInput);
-        } else
-        {
-            Debug.Log("INPUT -> none");
-        }
+        
 
         transform.Translate(Vector3.right * horizontalInput * horizontalSpeed * Time.deltaTime);
         if (ArenaBounds != null)
