@@ -8,6 +8,7 @@ public class Player2LaneMovement : MonoBehaviour
 
     [Header("Movimento Orizzontale")]
     [SerializeField] private float horizontalSpeed = 5f;
+    public BoxCollider ArenaBounds;
 
     private Vector3 startPosition;
 
@@ -44,6 +45,17 @@ public class Player2LaneMovement : MonoBehaviour
         }
 
         transform.Translate(Vector3.right * horizontalInput * horizontalSpeed * Time.deltaTime);
+        var actualPos = transform.position;
+        if (transform.position.x < ArenaBounds.bounds.min.x)
+        {
+            actualPos.x = ArenaBounds.bounds.min.x;
+            transform.position = actualPos;
+        }
+        else if (transform.position.x > ArenaBounds.bounds.max.x)
+        {
+            actualPos.x = ArenaBounds.bounds.max.x;
+            transform.position = actualPos;
+        }
     }
 
     void UpdateLanePosition()

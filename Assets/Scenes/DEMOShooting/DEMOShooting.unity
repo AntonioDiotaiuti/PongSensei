@@ -1082,6 +1082,7 @@ MonoBehaviour:
   laneOffset: 2
   currentLane: 1
   horizontalSpeed: 5
+  ArenaBounds: {fileID: 2111090003}
 --- !u!54 &1222501416
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2220,8 +2221,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 24, y: 27, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 17.799427, y: 27, z: 1}
+  m_Center: {x: 0.00948, y: 0, z: 0}
 --- !u!4 &2111090004
 Transform:
   m_ObjectHideFlags: 0
