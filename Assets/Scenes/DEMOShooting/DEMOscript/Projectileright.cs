@@ -20,10 +20,10 @@ public class Projectileright : MonoBehaviour
         if (other.CompareTag("Player2"))
         {
             GameManagerino.Instance.DeclareVictory("Player1");
-            Destroy(other.gameObject);  // distrugge Player2
+            Destroy(other.gameObject);  
         }
 
-        Destroy(gameObject);  // distrugge il proiettile
+        Destroy(gameObject);  
     }
 }
 
