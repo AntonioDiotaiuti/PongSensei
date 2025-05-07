@@ -1,33 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 10f;
-    public float reloadTime = 3f; 
-    public Image reloadBarUI;     // da assegnare nell'Inspector
-
+    [SerializeField] public float projectileSpeed = 10f;
     private bool hasAmmo = true;
-    private float reloadTimer = 0f;
-    private Vector3 lastPosition;
-
-    void Start()
-    {
-        lastPosition = transform.position;
-        if (reloadBarUI != null)
-            reloadBarUI.fillAmount = 0f;
-    }
+    private bool triggerHeld = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && hasAmmo)
+        // Tasto tastiera
+        bool keyboardShoot = Input.GetKeyDown(KeyCode.L);
+
+        // L2 controller (3rd axis)
+        float l2Value = Input.GetAxis("FireL2");
+        bool controllerShoot = l2Value > 0.5f && !triggerHeld;
+
+        if ((keyboardShoot || controllerShoot) && hasAmmo)
         {
             Shoot();
+            triggerHeld = true; // previene spam mentre L2 è tenuto premuto
         }
 
-        HandlePassiveReload();
+        // reset quando L2 rilasciato
+        if (l2Value < 0.3f)
+        {
+            triggerHeld = false;
+        }
     }
 
     void Shoot()
@@ -37,51 +37,13 @@ public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = Vector3.left * projectileSpeed; // correggi da linearVelocity a velocity
+            rb.linearVelocity = Vector3.left * projectileSpeed;
         }
         hasAmmo = false;
-
-        if (reloadBarUI != null)
-            reloadBarUI.fillAmount = 0f;
-
-        reloadTimer = 0f;
-    }
-
-    void HandlePassiveReload()
-    {
-        if (hasAmmo) return;
-
-        bool isMoving = Vector3.Distance(transform.position, lastPosition) > 0.01f;
-
-        if (!isMoving)
-        {
-            reloadTimer += Time.deltaTime;
-            if (reloadBarUI != null)
-                reloadBarUI.fillAmount = reloadTimer / reloadTime;
-
-            if (reloadTimer >= reloadTime)
-            {
-                Reload();
-            }
-        }
-        else
-        {
-            reloadTimer = 0f;
-            if (reloadBarUI != null)
-                reloadBarUI.fillAmount = 0f;
-        }
-
-        lastPosition = transform.position;
     }
 
     public void Reload()
     {
         hasAmmo = true;
-        reloadTimer = 0f;
-
-        if (reloadBarUI != null)
-            reloadBarUI.fillAmount = 1f;
     }
-
-    public bool HasAmmo => hasAmmo;
 }
