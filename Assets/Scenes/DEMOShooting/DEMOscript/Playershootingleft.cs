@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerShootingleft : MonoBehaviour, IPlayerShooter
+public class PlayerShootingleft : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;

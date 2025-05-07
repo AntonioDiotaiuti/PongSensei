@@ -1,21 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerShooting : MonoBehaviour, IPlayerShooter
+public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
+    public Image reloadBar;
     [SerializeField] public float projectileSpeed = 10f;
-    public string PlayerNumber = "1"; 
+    [SerializeField] private float reloadTime = 2f;
+    public string PlayerNumber = "1";
 
     private bool hasAmmo = true;
     private bool triggerHeld = false;
+    private float reloadTimer = 0f;
+    private bool isReloading = false;
     private string fireAxis;
     private KeyCode keyboardKey;
     private Vector3 shootDirection;
 
     void Start()
     {
-        fireAxis = "Fire" + PlayerNumber.ToString();
+        fireAxis = "Fire" + PlayerNumber;
         if (PlayerNumber == "1")
         {
             keyboardKey = KeyCode.L;
@@ -30,12 +35,10 @@ public class PlayerShooting : MonoBehaviour, IPlayerShooter
 
     void Update()
     {
-        
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);
-
-        
         float triggerValue = Input.GetAxis(fireAxis);
         bool triggerShoot = triggerValue > 0.5f && !triggerHeld;
+        bool isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
 
         if ((keyboardShoot || triggerShoot) && hasAmmo)
         {
@@ -46,6 +49,27 @@ public class PlayerShooting : MonoBehaviour, IPlayerShooter
         if (triggerValue < 0.3f)
         {
             triggerHeld = false;
+        }
+
+        if (!hasAmmo)
+        {
+            if (isMoving)
+            {
+                reloadTimer = 0f;
+                reloadBar.fillAmount = 0f;
+            }
+            else
+            {
+                reloadTimer += Time.deltaTime;
+                reloadBar.fillAmount = reloadTimer / reloadTime;
+
+                if (reloadTimer >= reloadTime)
+                {
+                    hasAmmo = true;
+                    reloadTimer = 0f;
+                    reloadBar.fillAmount = 1f;
+                }
+            }
         }
     }
 
@@ -60,15 +84,6 @@ public class PlayerShooting : MonoBehaviour, IPlayerShooter
         }
 
         hasAmmo = false;
-    }
-
-    public void Reload()
-    {
-        hasAmmo = true;
-    }
-
-    public bool NeedsAmmo()
-    {
-        return !hasAmmo;
+        reloadBar.fillAmount = 0f;
     }
 }
