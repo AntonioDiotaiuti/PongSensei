@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 02b4d296ebe98d24596d37f23be4c610
+guid: 0c5af5a506dc4694caf0cb5ed4832cf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -928452794175279194
-    second: COUPON_0
+      213: -6150384008709971305
+    second: JUMP_0
+  - first:
+      213: -4959259091351612375
+    second: JUMP_1
+  - first:
+      213: 1131083306628328740
+    second: JUMP_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: COUPON_0
+      name: JUMP_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 1839
-        height: 2445
+        x: 39
+        y: 18
+        width: 25
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6afa6745a197d13f0800000000000000
-      internalID: -928452794175279194
+      spriteID: 7926998845275aaa0800000000000000
+      internalID: -6150384008709971305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMP_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 18
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9245cd6b12c2d2bb0800000000000000
+      internalID: -4959259091351612375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JUMP_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 19
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42da4fe464a62bf00800000000000000
+      internalID: 1131083306628328740
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      COUPON_0: -928452794175279194
+      JUMP_0: -6150384008709971305
+      JUMP_1: -4959259091351612375
+      JUMP_2: 1131083306628328740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

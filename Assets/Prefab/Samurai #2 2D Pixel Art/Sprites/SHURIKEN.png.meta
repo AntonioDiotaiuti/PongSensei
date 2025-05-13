@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 02b4d296ebe98d24596d37f23be4c610
+guid: d13ba7359672e0c4ab83953e541d4676
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -928452794175279194
-    second: COUPON_0
+      213: -3291391736936066149
+    second: SHURIKEN_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: COUPON_0
+      name: SHURIKEN_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 1839
-        height: 2445
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6afa6745a197d13f0800000000000000
-      internalID: -928452794175279194
+      spriteID: b93154f57a0a252d0800000000000000
+      internalID: -3291391736936066149
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      COUPON_0: -928452794175279194
+      SHURIKEN_0: -3291391736936066149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
