@@ -1,5 +1,5 @@
-﻿using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -14,23 +14,31 @@ public class PlayerShooting : MonoBehaviour
     private bool triggerHeld = false;
     private float reloadTimer = 0f;
     private bool isReloading = false;
-    [SerializeField] private string fireAxis = "Fire1";
-    [SerializeField] private KeyCode keyboardKey = KeyCode.Space;
-    private Vector3 lastPosition;
+    private string fireAxis;
+    private KeyCode keyboardKey;
+    private Vector3 shootDirection;
 
     void Start()
     {
-        lastPosition = transform.position;
+        fireAxis = "Fire" + PlayerNumber;
+        if (PlayerNumber == "1")
+        {
+            keyboardKey = KeyCode.R;
+            shootDirection = Vector3.left;
+        }
+        else
+        {
+            keyboardKey = KeyCode.Mouse0;
+            shootDirection = Vector3.right;
+        }
     }
 
     void Update()
     {
-        float triggerValue = Input.GetAxis(fireAxis);  // Dichiarata qui
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);
+        float triggerValue = Input.GetAxis(fireAxis);
         bool triggerShoot = triggerValue > 0.5f && !triggerHeld;
-
-        bool isMoving = Vector3.Distance(transform.position, lastPosition) > 0.001f;
-        lastPosition = transform.position;
+        bool isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
 
         if ((keyboardShoot || triggerShoot) && hasAmmo)
         {
@@ -72,7 +80,7 @@ public class PlayerShooting : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.linearVelocity = firePoint.forward * projectileSpeed;
+            rb.linearVelocity = shootDirection * projectileSpeed;
         }
 
         hasAmmo = false;
