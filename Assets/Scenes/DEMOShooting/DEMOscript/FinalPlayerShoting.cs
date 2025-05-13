@@ -23,12 +23,12 @@ public class PlayerShooting : MonoBehaviour
         fireAxis = "Fire" + PlayerNumber;
         if (PlayerNumber == "1")
         {
-            keyboardKey = KeyCode.L;
+            keyboardKey = KeyCode.R;
             shootDirection = Vector3.left;
         }
         else
         {
-            keyboardKey = KeyCode.R;
+            keyboardKey = KeyCode.Mouse0;
             shootDirection = Vector3.right;
         }
     }

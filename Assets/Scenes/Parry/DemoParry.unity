@@ -192,7 +192,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0000009536743, y: 0}
+  m_Offset: {x: 4.4730597, y: -0.09896374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -202,7 +202,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.330606, y: 13.8833}
+  m_Size: {x: 5.1948295, y: 4.3431664}
   m_EdgeRadius: 0
 --- !u!114 &100257130
 MonoBehaviour:
@@ -342,7 +342,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 2.705172, y: -0.22628808}
+  m_Offset: {x: 1.0551691, y: -0.2447232}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -352,7 +352,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.410344, y: 5.3611903}
+  m_Size: {x: 2.2, y: 2.1}
   m_EdgeRadius: 0
 --- !u!1 &562520426
 GameObject:
@@ -916,7 +916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ColliderParry","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MovLeft","value":{"$content":"Y","$type":"UnityEngine.InputSystem.LowLevel.GamepadButton"},"typeHandle":{"Identification":"UnityEngine.InputSystem.LowLevel.GamepadButton,
+      Unity.InputSystem, Version=1.12.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 488929032}
 --- !u!114 &1017070088
@@ -1724,7 +1725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"ColliderParryTimerDuration","value":{"$content":0.5,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"ColliderParryTimerDuration","value":{"$content":0.2,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!4 &2102264441
@@ -1891,7 +1892,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 783213910218951100, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.3452
+      value: 7.97
       objectReference: {fileID: 0}
     - target: {fileID: 783213910218951100, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1956,12 +1957,12 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 683305266}
+  - {fileID: 2547247647363101948}
   - {fileID: 6800713525720522606}
   - {fileID: 5809690082985179864}
   - {fileID: 562520430}
   - {fileID: 962364011}
   - {fileID: 1239292186}
-  - {fileID: 2547247647363101948}
   - {fileID: 2102264441}
   - {fileID: 704014899}
   - {fileID: 1631111164}
