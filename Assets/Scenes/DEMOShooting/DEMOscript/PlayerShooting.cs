@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,17 +11,22 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] public float projectileSpeed = 10f;
     [SerializeField] private float reloadTime = 2f;
     public string PlayerNumber = "1";
+    public float CooldownInput = 0.3f;
 
     private bool hasAmmo = true;
     private bool triggerHeld = false;
+    public bool inputEnable = true;
     private float reloadTimer = 0f;
     private bool isReloading = false;
     private string fireAxis;
     private KeyCode keyboardKey;
     private Vector3 shootDirection;
 
+    public bool InputEnable {  get { return inputEnable; } }
+
     void Start()
     {
+        inputEnable = true;
         fireAxis = "Fire" + PlayerNumber;
         if (PlayerNumber == "1")
         {
@@ -35,6 +42,11 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
+        if (!inputEnable)
+        {
+            return;
+        }
+
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);
         float triggerValue = Input.GetAxis(fireAxis);
         bool triggerShoot = triggerValue > 0.5f && !triggerHeld;
@@ -42,8 +54,10 @@ public class PlayerShooting : MonoBehaviour
 
         if ((keyboardShoot || triggerShoot) && hasAmmo)
         {
+            inputEnable = false;
             Shoot();
             triggerHeld = true;
+            StartCoroutine(EnableInput(CooldownInput));
         }
 
         if (triggerValue < 0.3f)
@@ -85,5 +99,12 @@ public class PlayerShooting : MonoBehaviour
 
         hasAmmo = false;
         reloadBar.fillAmount = 0f;
+    }
+
+    IEnumerator EnableInput(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+
+        inputEnable = true;
     }
 }
