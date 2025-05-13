@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: d8ffd93259d472045a3cc4a28eae022f
+guid: 0990b5b6acae5714591f068735176636
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3571635775238715396
-    second: HURT_0
+      213: 4266877140188146530
+    second: ATTACKBlu_0
   - first:
-      213: -6552392919759675800
-    second: HURT_1
+      213: 7324066866825696854
+    second: ATTACKBlu_1
   - first:
-      213: -4191814458887339610
-    second: HURT_2
+      213: -5812844894391169271
+    second: ATTACKBlu_2
+  - first:
+      213: -4949054250354598085
+    second: ATTACKBlu_3
+  - first:
+      213: 4110995439155988888
+    second: ATTACKBlu_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HURT_0
+      name: ATTACKBlu_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 39
         y: 16
-        width: 26
-        height: 29
+        width: 21
+        height: 30
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4083e2270dff09130800000000000000
-      internalID: 3571635775238715396
+      spriteID: 26b2621f62ef63b30800000000000000
+      internalID: 4266877140188146530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HURT_1
+      name: ATTACKBlu_1
       rect:
         serializedVersion: 2
         x: 132
         y: 16
-        width: 26
-        height: 29
+        width: 54
+        height: 26
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86e90f40b593115a0800000000000000
-      internalID: -6552392919759675800
+      spriteID: 6569a54c20054a560800000000000000
+      internalID: 7324066866825696854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HURT_2
+      name: ATTACKBlu_2
       rect:
         serializedVersion: 2
-        x: 228
+        x: 222
         y: 16
-        width: 26
-        height: 29
+        width: 63
+        height: 42
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +171,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a18ca575fea3d5c0800000000000000
-      internalID: -4191814458887339610
+      spriteID: 90f0f57cd50a45fa0800000000000000
+      internalID: -5812844894391169271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACKBlu_3
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 16
+        width: 53
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f1a79616d615bb0800000000000000
+      internalID: -4949054250354598085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ATTACKBlu_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 16
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899c42822903d0930800000000000000
+      internalID: 4110995439155988888
       vertices: []
       indices: 
       edges: []
@@ -175,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ea17e942518d4e43b68d091ca05561e
+    spriteID: e9db299fa6ed87b47a646c9a04bf1982
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HURT_0: 3571635775238715396
-      HURT_1: -6552392919759675800
-      HURT_2: -4191814458887339610
+      ATTACKBlu_0: 4266877140188146530
+      ATTACKBlu_1: 7324066866825696854
+      ATTACKBlu_2: -5812844894391169271
+      ATTACKBlu_3: -4949054250354598085
+      ATTACKBlu_4: 4110995439155988888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

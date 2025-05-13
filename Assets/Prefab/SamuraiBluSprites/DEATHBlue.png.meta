@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 690ae03fce22ce347b0edc3349d31908
+guid: 8202d596b7ff37d4db18e3f2f7d5f3b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7802849386864260321
-    second: THROW_0
+      213: -5869415583774341521
+    second: DEATHBlue_0
   - first:
-      213: -8011165834367989338
-    second: THROW_1
+      213: 1116792561065127040
+    second: DEATHBlue_1
   - first:
-      213: -6945622382383760548
-    second: THROW_2
+      213: 6653197563019740310
+    second: DEATHBlue_2
   - first:
-      213: 6014046997106859587
-    second: THROW_3
+      213: 3586803153167398845
+    second: DEATHBlue_3
   - first:
-      213: 5386910073198659991
-    second: THROW_4
+      213: -5599687421339492538
+    second: DEATHBlue_4
   - first:
-      213: 4669647438223258972
-    second: THROW_5
+      213: 832501403928407784
+    second: DEATHBlue_5
   - first:
-      213: -2583579606685280589
-    second: THROW_6
+      213: 620163995044951289
+    second: DEATHBlue_6
+  - first:
+      213: -2095345174645970604
+    second: DEATHBlue_7
+  - first:
+      213: -3482174234211991631
+    second: DEATHBlue_8
+  - first:
+      213: 6788389941608782127
+    second: DEATHBlue_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,35 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: THROW_0
+      name: DEATHBlue_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 16
-        width: 21
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e43be31d2a494c60800000000000000
-      internalID: 7802849386864260321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: THROW_1
-      rect:
-        serializedVersion: 2
-        x: 135
+        x: 37
         y: 16
         width: 20
-        height: 30
+        height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a900cd5e1f92d090800000000000000
-      internalID: -8011165834367989338
+      spriteID: f660df1cf95ab8ea0800000000000000
+      internalID: -5869415583774341521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_2
+      name: DEATHBlue_1
       rect:
         serializedVersion: 2
-        x: 228
+        x: 133
         y: 16
-        width: 32
-        height: 26
+        width: 17
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5b73022e313c9f90800000000000000
-      internalID: -6945622382383760548
+      spriteID: 08ce512dae4af7f00800000000000000
+      internalID: 1116792561065127040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_3
+      name: DEATHBlue_2
       rect:
         serializedVersion: 2
-        x: 330
+        x: 233
         y: 16
-        width: 38
+        width: 15
         height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -199,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34e1f0d41ef267350800000000000000
-      internalID: 6014046997106859587
+      spriteID: 6944944fee7e45c50800000000000000
+      internalID: 6653197563019740310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_4
+      name: DEATHBlue_3
       rect:
         serializedVersion: 2
-        x: 426
+        x: 329
         y: 16
-        width: 38
-        height: 28
+        width: 16
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +208,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 799caf5ab2622ca40800000000000000
-      internalID: 5386910073198659991
+      spriteID: db73bcfc672e6c130800000000000000
+      internalID: 3586803153167398845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_5
+      name: DEATHBlue_4
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 16
+        width: 16
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f16dd65f9e942b0800000000000000
+      internalID: -5599687421339492538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHBlue_5
       rect:
         serializedVersion: 2
         x: 521
         y: 16
-        width: 31
-        height: 27
+        width: 16
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c553c9daa9bedc040800000000000000
-      internalID: 4669647438223258972
+      spriteID: 8eeaa28bd93ad8b00800000000000000
+      internalID: 832501403928407784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_6
+      name: DEATHBlue_6
       rect:
         serializedVersion: 2
-        x: 615
+        x: 614
         y: 16
-        width: 21
-        height: 30
+        width: 29
+        height: 22
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +274,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b6949e3908452cd0800000000000000
-      internalID: -2583579606685280589
+      spriteID: 9f434232ed34b9800800000000000000
+      internalID: 620163995044951289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHBlue_7
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 16
+        width: 30
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459e56f4aa6dbe2e0800000000000000
+      internalID: -2095345174645970604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHBlue_8
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 16
+        width: 30
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bfb6cbbbf4dcafc0800000000000000
+      internalID: -3482174234211991631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATHBlue_9
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 16
+        width: 30
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f291d6a7fa4353e50800000000000000
+      internalID: 6788389941608782127
       vertices: []
       indices: 
       edges: []
@@ -275,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bc283d1c56595f445bd6ec381ec447ad
+    spriteID: 3e52406cb5a6526459e4dd34d50166bc
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +360,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      THROW_0: 7802849386864260321
-      THROW_1: -8011165834367989338
-      THROW_2: -6945622382383760548
-      THROW_3: 6014046997106859587
-      THROW_4: 5386910073198659991
-      THROW_5: 4669647438223258972
-      THROW_6: -2583579606685280589
+      DEATHBlue_0: -5869415583774341521
+      DEATHBlue_1: 1116792561065127040
+      DEATHBlue_2: 6653197563019740310
+      DEATHBlue_3: 3586803153167398845
+      DEATHBlue_4: -5599687421339492538
+      DEATHBlue_5: 832501403928407784
+      DEATHBlue_6: 620163995044951289
+      DEATHBlue_7: -2095345174645970604
+      DEATHBlue_8: -3482174234211991631
+      DEATHBlue_9: 6788389941608782127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

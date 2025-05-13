@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: 690ae03fce22ce347b0edc3349d31908
+guid: 0f8c201a88295034482b999b246501b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7802849386864260321
-    second: THROW_0
+      213: -5283129630175300685
+    second: DASHBlue_0
   - first:
-      213: -8011165834367989338
-    second: THROW_1
+      213: -6337438495655056741
+    second: DASHBlue_1
   - first:
-      213: -6945622382383760548
-    second: THROW_2
+      213: 7943862242435995944
+    second: DASHBlue_2
   - first:
-      213: 6014046997106859587
-    second: THROW_3
+      213: 8883994165493361724
+    second: DASHBlue_3
   - first:
-      213: 5386910073198659991
-    second: THROW_4
+      213: 132426283883749596
+    second: DASHBlue_4
   - first:
-      213: 4669647438223258972
-    second: THROW_5
+      213: 8240853016617022602
+    second: DASHBlue_5
   - first:
-      213: -2583579606685280589
-    second: THROW_6
+      213: -1710639763786291765
+    second: DASHBlue_6
+  - first:
+      213: -7760638981230159704
+    second: DASHBlue_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: THROW_0
+      name: DASHBlue_0
       rect:
         serializedVersion: 2
         x: 39
         y: 16
-        width: 21
-        height: 30
+        width: 22
+        height: 32
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e43be31d2a494c60800000000000000
-      internalID: 7802849386864260321
+      spriteID: 3b37f03b79d8ea6b0800000000000000
+      internalID: -5283129630175300685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_1
+      name: DASHBlue_1
       rect:
         serializedVersion: 2
-        x: 135
+        x: 133
         y: 16
-        width: 20
-        height: 30
+        width: 34
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a900cd5e1f92d090800000000000000
-      internalID: -8011165834367989338
+      spriteID: b9a2890f345ec08a0800000000000000
+      internalID: -6337438495655056741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_2
+      name: DASHBlue_2
       rect:
         serializedVersion: 2
-        x: 228
+        x: 234
         y: 16
-        width: 32
-        height: 26
+        width: 29
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5b73022e313c9f90800000000000000
-      internalID: -6945622382383760548
+      spriteID: 82919010f944e3e60800000000000000
+      internalID: 7943862242435995944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_3
+      name: DASHBlue_3
       rect:
         serializedVersion: 2
         x: 330
         y: 16
-        width: 38
-        height: 28
+        width: 29
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34e1f0d41ef267350800000000000000
-      internalID: 6014046997106859587
+      spriteID: c3cefd4cf994a4b70800000000000000
+      internalID: 8883994165493361724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_4
+      name: DASHBlue_4
       rect:
         serializedVersion: 2
-        x: 426
+        x: 421
         y: 16
-        width: 38
-        height: 28
+        width: 23
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 799caf5ab2622ca40800000000000000
-      internalID: 5386910073198659991
+      spriteID: cd0e0d9e00976d100800000000000000
+      internalID: 132426283883749596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_5
+      name: DASHBlue_5
       rect:
         serializedVersion: 2
-        x: 521
+        x: 518
         y: 16
-        width: 31
-        height: 27
+        width: 22
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,19 +246,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c553c9daa9bedc040800000000000000
-      internalID: 4669647438223258972
+      spriteID: a84f9ad18246d5270800000000000000
+      internalID: 8240853016617022602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: THROW_6
+      name: DASHBlue_6
       rect:
         serializedVersion: 2
-        x: 615
+        x: 612
         y: 16
-        width: 21
+        width: 25
         height: 30
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -265,8 +268,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b6949e3908452cd0800000000000000
-      internalID: -2583579606685280589
+      spriteID: bc52cdcb2369248e0800000000000000
+      internalID: -1710639763786291765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DASHBlue_7
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 16
+        width: 22
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a81ab5d6fbac4490800000000000000
+      internalID: -7760638981230159704
       vertices: []
       indices: 
       edges: []
@@ -275,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bc283d1c56595f445bd6ec381ec447ad
+    spriteID: 29db861f91cac9e4e81065ab6ffa82be
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      THROW_0: 7802849386864260321
-      THROW_1: -8011165834367989338
-      THROW_2: -6945622382383760548
-      THROW_3: 6014046997106859587
-      THROW_4: 5386910073198659991
-      THROW_5: 4669647438223258972
-      THROW_6: -2583579606685280589
+      DASHBlue_0: -5283129630175300685
+      DASHBlue_1: -6337438495655056741
+      DASHBlue_2: 7943862242435995944
+      DASHBlue_3: 8883994165493361724
+      DASHBlue_4: 132426283883749596
+      DASHBlue_5: 8240853016617022602
+      DASHBlue_6: -1710639763786291765
+      DASHBlue_7: -7760638981230159704
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
