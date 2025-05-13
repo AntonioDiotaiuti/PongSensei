@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: c315127b56eb54147af20bb14065a6ee
+guid: 27ec959cc5b1e624b84cb61b6ad60de1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 815424164945274260
-    second: IDLE_0
-  - first:
-      213: -270785710348516584
-    second: IDLE_1
-  - first:
-      213: 8443794771774750484
-    second: IDLE_2
-  - first:
-      213: 1777182293076053196
-    second: IDLE_3
-  - first:
-      213: 6114163804962241700
-    second: IDLE_4
+      213: 1805158079502305607
+    second: Flag_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_0
+      name: Flag_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 16
-        width: 20
-        height: 35
+        x: 0
+        y: 0
+        width: 28
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +115,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49525dc25f7f05b00800000000000000
-      internalID: 815424164945274260
+      spriteID: 749492c85b53d0910800000000000000
+      internalID: 1805158079502305607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_1
+      name: Flag_1
       rect:
         serializedVersion: 2
-        x: 133
-        y: 16
-        width: 20
-        height: 34
+        x: 31
+        y: 0
+        width: 25
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 813cc64c4d9fd3cf0800000000000000
-      internalID: -270785710348516584
+      spriteID: e36b9242ea6d3ce4aa3d30dd531bfe05
+      internalID: 1464257135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_2
+      name: Flag_2
       rect:
         serializedVersion: 2
-        x: 229
-        y: 16
-        width: 21
-        height: 33
+        x: 60
+        y: 0
+        width: 26
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 41f3fe79b926e2570800000000000000
-      internalID: 8443794771774750484
+      spriteID: c3de7e6c3960b5244827a04be74e4c39
+      internalID: -2006314027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_3
+      name: Flag_3
       rect:
         serializedVersion: 2
-        x: 325
-        y: 16
-        width: 20
-        height: 33
+        x: 89
+        y: 0
+        width: 27
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ccc89ef21e1d9a810800000000000000
-      internalID: 1777182293076053196
+      spriteID: fda1a9511f44c424e81bf2fb4ff16616
+      internalID: 1894670672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_4
+      name: Flag_4
       rect:
         serializedVersion: 2
-        x: 421
-        y: 16
-        width: 20
-        height: 34
+        x: 118
+        y: 0
+        width: 25
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4ac335d169fd9d450800000000000000
-      internalID: 6114163804962241700
+      spriteID: 068acad06ce8b9c48aa2ab7fbfab71ef
+      internalID: 155523189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flag_5
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 25
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181f6e01a89b367429db3557c2c77fe1
+      internalID: -1749914727
       vertices: []
       indices: 
       edges: []
@@ -225,7 +235,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 493919ff34bef00428af90acb11e3144
+    spriteID: 2a1c990315bdde64e8a38527490b7f23
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +245,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IDLE_0: 815424164945274260
-      IDLE_1: -270785710348516584
-      IDLE_2: 8443794771774750484
-      IDLE_3: 1777182293076053196
-      IDLE_4: 6114163804962241700
+      Flag_0: 1805158079502305607
+      Flag_1: 1464257135
+      Flag_2: -2006314027
+      Flag_3: 1894670672
+      Flag_4: 155523189
+      Flag_5: -1749914727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
