@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 890466853578281107}
   - component: {fileID: 7844424933577672095}
   - component: {fileID: 4428576447115734337}
+  - component: {fileID: 5620933072001245575}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player1
@@ -246,12 +247,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2913510733876948561, guid: 39ee4d5abfe586d4693c0df91ac25219, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02b4d296ebe98d24596d37f23be4c610, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.38, y: 1.61}
+  m_Size: {x: 0.62, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -271,11 +272,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4027756343970696616, guid: 985d14c33f9325e47a53de8e522c4de3, type: 3}
   firePoint: {fileID: 1515548946199850911}
-  reloadBar: {fileID: 0}
   projectileSpeed: 10
-  reloadTime: 2
-  PlayerNumber: 1
   CooldownInput: 0.3
+  playerNumber: 1
+  keyboardKey: 114
   inputEnable: 1
 --- !u!58 &241842000038536979
 CircleCollider2D:
@@ -374,3 +374,19 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 0ddec9f230cce7049a0ced9ab2682ded, type: 2}
+--- !u!114 &5620933072001245575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113289645248795119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d89c60ad50df1f4c8043e96e565ce0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementComp: {fileID: 8264281530836250325}
+  playerNumber: 1
+  reloadTime: 2
+  reloadBar: {fileID: 0}

@@ -12,7 +12,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private string playerNumber = "1";
     [SerializeField] private KeyCode keyboardKey = KeyCode.R;
 
-    private bool inputEnable = true;
+    public bool inputEnable = true;
     private bool triggerHeld = false;
     private string fireAxis;
     private Vector3 shootDirection;
