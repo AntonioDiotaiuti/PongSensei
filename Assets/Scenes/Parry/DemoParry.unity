@@ -916,8 +916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ColliderParry","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MovLeft","value":{"$content":"Y","$type":"UnityEngine.InputSystem.LowLevel.GamepadButton"},"typeHandle":{"Identification":"UnityEngine.InputSystem.LowLevel.GamepadButton,
-      Unity.InputSystem, Version=1.12.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ScriptShooting","value":null,"typeHandle":{"Identification":"PlayerShooting,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 488929032}
 --- !u!114 &1017070088
@@ -938,6 +938,8 @@ MonoBehaviour:
   projectileSpeed: 10
   reloadTime: 2
   PlayerNumber: 1
+  CooldownInput: 0.3
+  inputEnable: 1
 --- !u!1 &1140710254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,6 +1684,8 @@ MonoBehaviour:
   projectileSpeed: 10
   reloadTime: 2
   PlayerNumber: 2
+  CooldownInput: 0.3
+  inputEnable: 1
 --- !u!1 &2102264438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4286415160519278342, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+    - {fileID: 4457601084152935353, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2033089199349456308, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
@@ -1812,7 +1817,7 @@ PrefabInstance:
       addedObject: {fileID: 488929033}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6113289645248795119, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 1017070088}
     - targetCorrespondingSourceObject: {fileID: 6113289645248795119, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       insertIndex: -1
