@@ -2,7 +2,7 @@
 
 public class PlayerLaneMovement : MonoBehaviour
 {
-    public BoxCollider ArenaBounds;
+    public BoxCollider2D ArenaBounds;
     public string PlayerNumber = "1";
     [Header("Movimento Verticale (a scatti)")]
     public float laneOffset = 2f;
@@ -91,15 +91,16 @@ public class PlayerLaneMovement : MonoBehaviour
         if (ArenaBounds != null)
         {
             var actualPos = transform.position;
-            if (transform.position.x < ArenaBounds.bounds.min.x)
+            if (transform.position.x > ArenaBounds.bounds.max.x)
+            {
+                actualPos.x = ArenaBounds.bounds.max.x;
+                transform.position = actualPos; 
+            }
+            else if (transform.position.x < ArenaBounds.bounds.min.x)
             {
                 actualPos.x = ArenaBounds.bounds.min.x;
                 transform.position = actualPos;
-            }
-            else if (transform.position.x > ArenaBounds.bounds.max.x)
-            {
-                actualPos.x = ArenaBounds.bounds.max.x;
-                transform.position = actualPos;
+
             }
         }        
     }
