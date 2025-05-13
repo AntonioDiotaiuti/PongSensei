@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.3333334
+      objectReference: {fileID: 0}
     - target: {fileID: 3737859710482448643, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.27
@@ -48,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7858392742920922024, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3291391736936066149, guid: d13ba7359672e0c4ab83953e541d4676, type: 3}
     - target: {fileID: 8384539621798479726, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_Name
       value: Ricarica Variant
