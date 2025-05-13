@@ -2,9 +2,11 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ReloadSystem : MonoBehaviour {
-
+public class ReloadSystem : MonoBehaviour
+{
     public PlayerLaneMovement MovementComp;
+    public static event Action<string> OnPlayerShot; // Evento per segnalare il colpo sparato
+
     [Header("Impostazioni Giocatore")]
     [SerializeField] private string playerNumber = "1";
     [SerializeField] private float reloadTime = 2f;
@@ -17,11 +19,13 @@ public class ReloadSystem : MonoBehaviour {
     private string horizontalAxis;
     private string verticalAxis;
 
-    private void Awake() {
+    private void Awake()
+    {
         MovementComp.OnMovementUpdate += OnMovementUpdate;
     }
 
-    private void OnDestroy() {
+    private void OnDestroy()
+    {
         MovementComp.OnMovementUpdate -= OnMovementUpdate;
     }
 
@@ -29,15 +33,12 @@ public class ReloadSystem : MonoBehaviour {
     {
         reloadBar.fillAmount = 1f;
 
-        // Imposta i nomi degli assi in base al PlayerNumber
         horizontalAxis = "Horizontal" + playerNumber;
         verticalAxis = "Vertical" + playerNumber;
     }
 
     void Update()
     {
-        // Verifica SOLO i movimenti del proprio player
-
         if (!hasAmmo)
         {
             if (isMoving)
@@ -51,9 +52,7 @@ public class ReloadSystem : MonoBehaviour {
 
                 if (reloadTimer >= reloadTime)
                 {
-                    hasAmmo = true;
-                    reloadTimer = 0f;
-                    reloadBar.fillAmount = 1f;
+                    Reload();
                 }
             }
         }
@@ -69,6 +68,9 @@ public class ReloadSystem : MonoBehaviour {
     {
         hasAmmo = false;
         reloadBar.fillAmount = 0f;
+
+        // Notifica che il giocatore ha sparato
+        OnPlayerShot?.Invoke(playerNumber);
     }
 
     public bool HasAmmo()
@@ -76,12 +78,30 @@ public class ReloadSystem : MonoBehaviour {
         return hasAmmo;
     }
 
-    private void OnMovementUpdate(bool moving) {
+    private void Reload()
+    {
+        hasAmmo = true;
+        reloadTimer = 0f;
+        reloadBar.fillAmount = 1f;
+    }
+
+    private void OnMovementUpdate(bool moving)
+    {
         isMoving = moving;
-        if (isMoving && !hasAmmo) {
+        if (isMoving && !hasAmmo)
+        {
             ResetReload();
         }
-        
-        Debug.Log("UPDATE -> "+isMoving);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        ReloadItem reloadItem = other.GetComponent<ReloadItem>();
+        if (reloadItem != null && !hasAmmo)
+        {
+            Reload();
+            Destroy(reloadItem.gameObject);
+        }
     }
 }
+
