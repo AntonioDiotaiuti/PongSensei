@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DUST EFFECT_0: -1036682897330304192
+      DUST EFFECT_1: -7182029721696164526
+      DUST EFFECT_2: -8125660744113980657
+      DUST EFFECT_3: 578708449811835306
+      DUST EFFECT_4: -827261049036332669
+      DUST EFFECT_5: 6853135058438938368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
