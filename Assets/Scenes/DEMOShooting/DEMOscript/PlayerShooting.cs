@@ -6,28 +6,26 @@ public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public Image reloadBar;
-    [SerializeField] public float projectileSpeed = 10f;
-    [SerializeField] private float reloadTime = 2f;
-    public string PlayerNumber = "1";
+    public float projectileSpeed = 10f;
     public float CooldownInput = 0.3f;
 
-    private bool hasAmmo = true;
+    [SerializeField] private string playerNumber = "1";
+    [SerializeField] private KeyCode keyboardKey = KeyCode.R;
+
+    private bool inputEnable = true;
     private bool triggerHeld = false;
-    public bool inputEnable = true;
-    private float reloadTimer = 0f;
-    private bool isReloading = false;
     private string fireAxis;
-    private KeyCode keyboardKey;
     private Vector3 shootDirection;
 
-    public bool InputEnable {  get { return inputEnable; } }
+    private ReloadSystem reloadSystem;
 
     void Start()
     {
-        inputEnable = true;
-        fireAxis = "Fire" + PlayerNumber;
-        if (PlayerNumber == "1")
+        reloadSystem = GetComponent<ReloadSystem>();
+
+        fireAxis = "Fire" + playerNumber;
+
+        if (playerNumber == "1")
         {
             keyboardKey = KeyCode.R;
             shootDirection = Vector3.left;
@@ -41,20 +39,16 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (!inputEnable)
-        {
-            return;
-        }
+        if (!inputEnable) return;
 
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);
         float triggerValue = Input.GetAxis(fireAxis);
         bool triggerShoot = triggerValue > 0.5f && !triggerHeld;
-        bool isMoving = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
 
-        if ((keyboardShoot || triggerShoot) && hasAmmo)
+        if ((keyboardShoot || triggerShoot) && reloadSystem.HasAmmo())
         {
             inputEnable = false;
-            Shoot();
+            Fire();
             triggerHeld = true;
             StartCoroutine(EnableInput(CooldownInput));
         }
@@ -63,30 +57,9 @@ public class PlayerShooting : MonoBehaviour
         {
             triggerHeld = false;
         }
-
-        if (!hasAmmo)
-        {
-            if (isMoving)
-            {
-                reloadTimer = 0f;
-                reloadBar.fillAmount = 0f;
-            }
-            else
-            {
-                reloadTimer += Time.deltaTime;
-                reloadBar.fillAmount = reloadTimer / reloadTime;
-
-                if (reloadTimer >= reloadTime)
-                {
-                    hasAmmo = true;
-                    reloadTimer = 0f;
-                    reloadBar.fillAmount = 1f;
-                }
-            }
-        }
     }
 
-    void Shoot()
+    void Fire()
     {
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
@@ -96,14 +69,13 @@ public class PlayerShooting : MonoBehaviour
             rb.linearVelocity = shootDirection * projectileSpeed;
         }
 
-        hasAmmo = false;
-        reloadBar.fillAmount = 0f;
+        reloadSystem.ConsumeAmmo();
     }
 
     IEnumerator EnableInput(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
-
         inputEnable = true;
     }
 }
+
