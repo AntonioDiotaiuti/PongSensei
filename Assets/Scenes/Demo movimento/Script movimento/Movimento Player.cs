@@ -17,7 +17,9 @@ public class PlayerLaneMovement : MonoBehaviour
     private string horizontalAxisPlayer;
     private string verticalAxisPlayer;
 
-    public bool isMoving = false; // VARIABILE isMoving
+    public bool isMoving = false;
+
+    private Animator animator;
 
     public delegate void MovementEvent(bool moving);
     public MovementEvent OnMovementUpdate;
@@ -28,6 +30,8 @@ public class PlayerLaneMovement : MonoBehaviour
         verticalAxisPlayer = "DPadVertical" + PlayerNumber;
         startPosition = transform.position;
         UpdateLanePosition();
+
+        animator = GetComponent<Animator>(); // animator
     }
 
     void Update()
@@ -61,12 +65,24 @@ public class PlayerLaneMovement : MonoBehaviour
                 currentLane++;
                 UpdateLanePosition();
                 verticalAxisInUse = true;
+
+                // DASH 
+                if (IsPlayerOne() && animator != null)
+                {
+                    animator.SetTrigger("isDashing");
+                }
             }
             else if ((moveDown || verticalInput < -0.5f) && currentLane > 0)
             {
                 currentLane--;
                 UpdateLanePosition();
                 verticalAxisInUse = true;
+
+                // DASH
+                if (IsPlayerOne() && animator != null)
+                {
+                    animator.SetTrigger("isDashing");
+                }
             }
             else
             {
@@ -92,8 +108,10 @@ public class PlayerLaneMovement : MonoBehaviour
             if (pressD) horizontalInput = 1f;
             else if (pressA) horizontalInput = -1f;
 
-            //  solo P1
             isMoving = pressA || pressD;
+
+            if (animator != null)
+                animator.SetBool("isMoving", isMoving);
         }
         else
         {
