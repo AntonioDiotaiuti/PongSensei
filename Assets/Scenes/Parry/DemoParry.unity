@@ -7528,6 +7528,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7844424933577672095, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ColliderParry","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ScriptShooting","value":null,"typeHandle":{"Identification":"PlayerShooting,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
     - target: {fileID: 8264281530836250325, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: ArenaBounds
       value: 
@@ -7547,13 +7553,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6113289645248795119, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2547247647363101950}
   m_SourcePrefab: {fileID: 100100000, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
 --- !u!1 &2547247647363101949 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6113289645248795119, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
   m_PrefabInstance: {fileID: 2547247647363101948}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2547247647363101950
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547247647363101949}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce662446112b12042b5b820d148f6227, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4617973655923455429
 PrefabInstance:
   m_ObjectHideFlags: 0
