@@ -559,7 +559,10 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4027756343970696616, guid: 985d14c33f9325e47a53de8e522c4de3, type: 3}
   firePoint: {fileID: 1981055784}
   projectileSpeed: 10
-  PlayerNumber: 1
+  CooldownInput: 0.3
+  playerNumber: 1
+  keyboardKey: 0
+  inputEnable: 1
 --- !u!1 &1082606785
 GameObject:
   m_ObjectHideFlags: 0
