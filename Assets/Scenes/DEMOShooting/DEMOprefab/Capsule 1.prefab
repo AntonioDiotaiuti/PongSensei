@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 8469398830157374317}
   - component: {fileID: 6858484280179976706}
   - component: {fileID: 5676398999483966638}
-  - component: {fileID: 128304844972704979}
   - component: {fileID: 6468715444410731374}
+  - component: {fileID: 8181395735638956155}
   m_Layer: 0
   m_Name: Capsule 1
-  m_TagString: Untagged
+  m_TagString: Proiettile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,8 +88,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &128304844972704979
-CapsuleCollider:
+--- !u!114 &6468715444410731374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423008949847335050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24b5a01e9e2a6d42b6e4771f20c4390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifetime: 2
+--- !u!65 &8181395735638956155
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,22 +120,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6468715444410731374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2423008949847335050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24b5a01e9e2a6d42b6e4771f20c4390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifetime: 2
+  serializedVersion: 3
+  m_Size: {x: 0.3784427, y: 2.0000002, z: 0.41793272}
+  m_Center: {x: 0.07376034, y: 0, z: 0.030883938}

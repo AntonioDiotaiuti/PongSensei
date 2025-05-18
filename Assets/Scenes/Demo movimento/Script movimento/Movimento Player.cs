@@ -2,7 +2,7 @@
 
 public class PlayerLaneMovement : MonoBehaviour
 {
-    public BoxCollider ArenaBounds;
+    public BoxCollider2D ArenaBounds;
     public string PlayerNumber = "1";
     [Header("Movimento Verticale (a scatti)")]
     public float laneOffset = 2f;
@@ -15,9 +15,11 @@ public class PlayerLaneMovement : MonoBehaviour
     private bool verticalAxisInUse = false;
     private string horizontalAxisPlayer;
     private string verticalAxisPlayer;
-
-    void Start()
-    {
+    
+    public delegate void MovementEvent(bool moving);
+    public MovementEvent OnMovementUpdate;
+    
+    void Start() {
         horizontalAxisPlayer = "DPadHorizontal" + PlayerNumber;
         verticalAxisPlayer = "DPadVertical" + PlayerNumber;
         startPosition = transform.position;
@@ -61,6 +63,9 @@ public class PlayerLaneMovement : MonoBehaviour
                 UpdateLanePosition();
                 verticalAxisInUse = true;
             }
+            else {
+                OnMovementUpdate?.Invoke(false);
+            }
         }
 
         if (Mathf.Abs(verticalInput) < 0.3f)
@@ -83,38 +88,30 @@ public class PlayerLaneMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow)) horizontalInput = 1f;
             else if (Input.GetKey(KeyCode.LeftArrow)) horizontalInput = -1f;
         }
-        
 
-        // Freccette controller (← / →)
-        horizontalInput += Input.GetAxis(horizontalAxisPlayer);
-        if (horizontalInput != 0.0f)
-        {
-            Debug.Log("INPUT -> "+horizontalInput);
-        } else
-        {
-            Debug.Log("INPUT -> none");
-        }
+        OnMovementUpdate?.Invoke(horizontalInput != 0.0f);
 
         transform.Translate(Vector3.right * horizontalInput * horizontalSpeed * Time.deltaTime);
         if (ArenaBounds != null)
         {
             var actualPos = transform.position;
-            if (transform.position.x < ArenaBounds.bounds.min.x)
+            if (transform.position.x > ArenaBounds.bounds.max.x)
+            {
+                actualPos.x = ArenaBounds.bounds.max.x;
+                transform.position = actualPos; 
+            }
+            else if (transform.position.x < ArenaBounds.bounds.min.x)
             {
                 actualPos.x = ArenaBounds.bounds.min.x;
                 transform.position = actualPos;
-            }
-            else if (transform.position.x > ArenaBounds.bounds.max.x)
-            {
-                actualPos.x = ArenaBounds.bounds.max.x;
-                transform.position = actualPos;
+
             }
         }        
     }
 
-    void UpdateLanePosition()
-    {
+    void UpdateLanePosition() {
         float newY = startPosition.y + (currentLane - 1) * laneOffset;
+        OnMovementUpdate?.Invoke(true);
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 
