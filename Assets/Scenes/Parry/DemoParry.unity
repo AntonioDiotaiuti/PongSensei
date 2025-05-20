@@ -7532,7 +7532,8 @@ PrefabInstance:
       propertyPath: _data._json
       value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ColliderParry","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ScriptShooting","value":null,"typeHandle":{"Identification":"PlayerShooting,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"isMoving","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 8264281530836250325, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: ArenaBounds
@@ -7540,15 +7541,19 @@ PrefabInstance:
       objectReference: {fileID: 574192157}
     - target: {fileID: 9092737918951010139, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_Size.x
-      value: 2.1999998
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9092737918951010139, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_Size.y
-      value: 1.1151632
+      value: 1.6666665
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092737918951010139, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9092737918951010139, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_Offset.y
-      value: 0.061094582
+      value: 0.33333328
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7736,11 +7741,11 @@ PrefabInstance:
       objectReference: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8029716027073392407, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_Size.x
-      value: 5.19483
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8029716027073392407, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_Size.y
-      value: 1.814703
+      value: 1.666667
       objectReference: {fileID: 0}
     - target: {fileID: 8029716027073392407, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_Offset.y
@@ -7769,13 +7774,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4594315789103833561, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6800713525720522617}
   m_SourcePrefab: {fileID: 100100000, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
 --- !u!1 &6800713525720522607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594315789103833561, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
   m_PrefabInstance: {fileID: 6800713525720522606}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &6800713525720522617
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6800713525720522607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a8e21e71adaf1e47b7a896717793695, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
