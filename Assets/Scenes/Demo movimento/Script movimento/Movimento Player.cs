@@ -67,7 +67,7 @@ public class PlayerLaneMovement : MonoBehaviour
                 verticalAxisInUse = true;
 
                 // DASH 
-                if (IsPlayerOne() && animator != null)
+                if (animator != null)
                 {
                     animator.SetTrigger("isDashing");
                 }
@@ -79,7 +79,7 @@ public class PlayerLaneMovement : MonoBehaviour
                 verticalAxisInUse = true;
 
                 // DASH
-                if (IsPlayerOne() && animator != null)
+                if (animator != null)
                 {
                     animator.SetTrigger("isDashing");
                 }
@@ -108,10 +108,6 @@ public class PlayerLaneMovement : MonoBehaviour
             if (pressD) horizontalInput = 1f;
             else if (pressA) horizontalInput = -1f;
 
-            isMoving = pressA || pressD;
-
-            if (animator != null)
-                animator.SetBool("isMoving", isMoving);
         }
         else
         {
@@ -119,9 +115,18 @@ public class PlayerLaneMovement : MonoBehaviour
             else if (Input.GetKey(KeyCode.LeftArrow)) horizontalInput = -1f;
         }
 
-        OnMovementUpdate?.Invoke(horizontalInput != 0.0f);
+        float horizontalInputPad = Input.GetAxis(horizontalAxisPlayer);
 
-        transform.Translate(Vector3.right * horizontalInput * horizontalSpeed * Time.deltaTime);
+        bool usedPad = Mathf.Abs(horizontalInputPad) > 0.5f;
+        isMoving = horizontalInput != 0.0f || usedPad;
+
+        if (animator != null)
+            animator.SetBool("isMoving", isMoving);
+
+        OnMovementUpdate?.Invoke(isMoving);
+
+        float movingToConsider = usedPad ? horizontalInputPad : horizontalInput;
+        transform.Translate(Vector3.right * movingToConsider * horizontalSpeed * Time.deltaTime);
 
         if (ArenaBounds != null)
         {
