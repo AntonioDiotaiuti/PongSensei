@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player1"))
         {
