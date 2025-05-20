@@ -63,10 +63,10 @@ public class PlayerShooting : MonoBehaviour
     {
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        if (rb != null)
+        var bulletComp = bullet.GetComponent<Bullet>();
+        if (bulletComp != null)
         {
-            rb.linearVelocity = shootDirection * projectileSpeed;
+            bulletComp.direction = firePoint.right;
         }
 
         reloadSystem.ConsumeAmmo();
