@@ -96,6 +96,7 @@ public class PlayerLaneMovement : MonoBehaviour
         }
     }
 
+
     void HandleHorizontalInput()
     {
         float horizontalInput = 0f;
