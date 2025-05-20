@@ -65,20 +65,20 @@ public class FlipPlayer : MonoBehaviour
                 var offset1 = ColliderParry1.offset;
                 offset1.x = Mathf.Abs(offset1.x) * -1.0f;
                 ColliderParry1.offset = offset1;
-                var pos1 = FirePoint1.transform.position;
+                var pos1 = FirePoint1.transform.localPosition;
                 pos1.x = Mathf.Abs(pos1.x) * -1.0f;
                 FirePoint1.transform.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
-                FirePoint1.transform.position = pos1;
+                FirePoint1.transform.localPosition = pos1;
 
                 Player2.flipX = false;
                 Side2 = PlayerSide.Left;
                 var offset2 = ColliderParry2.offset;
                 offset2.x = Mathf.Abs(offset2.x);
                 ColliderParry2.offset = offset2;
-                var pos2 = FirePoint2.transform.position;
+                var pos2 = FirePoint2.transform.localPosition;
                 pos2.x = Mathf.Abs(pos2.x);
                 FirePoint2.transform.eulerAngles = Vector3.zero;
-                FirePoint2.transform.position = pos2;
+                FirePoint2.transform.localPosition = pos2;
             }
         }
     }
