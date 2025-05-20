@@ -16,15 +16,15 @@ public class Bullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player1"))
+        if (collision.CompareTag("Player1") || collision.CompareTag("Player2"))
         {
-            Death = true; // attiva booleana
-            StartCoroutine(HandlePlayerDeath(collision.gameObject, "Player2"));
-        }
-        else if (collision.CompareTag("Player2"))
-        {
-            Death = true;
-            StartCoroutine(HandlePlayerDeath(collision.gameObject, "Player1"));
+            var deathComp = collision.GetComponent<death>();
+            if (deathComp != null)
+            {
+                deathComp.HandlePlayerDeath();
+            }
+
+            Destroy(gameObject);
         }
     }
 

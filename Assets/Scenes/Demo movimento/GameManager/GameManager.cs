@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public void DeclareVictory(string winner)
     {
+        Debug.Log("sfsdg");
         Time.timeScale = 0f; // blocca il gioco
         victoryPanel.SetActive(true);
         victoryText.text = winner + " ha vinto!";

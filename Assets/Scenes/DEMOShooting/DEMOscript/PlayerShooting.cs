@@ -76,8 +76,10 @@ public class PlayerShooting : MonoBehaviour
     {
         Destroy(gameObject);
 
+        string winnerPlayer = playerNumber ==  "1" ? "2" : "1";
+
         //Vittoria + blocco gioco
-        GameManager.Instance.DeclareVictory("Player"+playerNumber.ToString());
+        GameManager.Instance.DeclareVictory("Player"+ winnerPlayer);
     }
 
     IEnumerator EnableInput(float timeToWait)
