@@ -72,6 +72,14 @@ public class PlayerShooting : MonoBehaviour
         reloadSystem.ConsumeAmmo();
     }
 
+    private void OnDeath()
+    {
+        Destroy(gameObject);
+
+        //Vittoria + blocco gioco
+        GameManager.Instance.DeclareVictory("Player"+playerNumber.ToString());
+    }
+
     IEnumerator EnableInput(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);

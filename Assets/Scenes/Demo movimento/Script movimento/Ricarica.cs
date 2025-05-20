@@ -38,7 +38,7 @@ public class Bullet : MonoBehaviour
 
         // Trigger animazione Hurt
         anim.SetTrigger("isHurt");
-
+        /*
         //Aspetta che HurtP1 sia attiva
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName("HurtP1"))
             yield return null;
@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSecondsRealtime(anim.GetCurrentAnimatorStateInfo(0).length);
 
         //Trigger animazione Death
-        anim.SetTrigger("isDeath");
+        //anim.SetTrigger("isDeath");
 
         //Aspetta che DeathP1 sia attiva
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName("DeathP1"))
@@ -61,5 +61,6 @@ public class Bullet : MonoBehaviour
 
         //Vittoria + blocco gioco
         GameManager.Instance.DeclareVictory(winner);
+        */
     }
 }
