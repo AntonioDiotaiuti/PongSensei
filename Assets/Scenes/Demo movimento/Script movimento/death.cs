@@ -23,12 +23,9 @@ public class death : MonoBehaviour
    
     public void HandlePlayerDeath()
     {
-        gameObject.GetComponent<PlayerLaneMovement>().enabled = false;
-        gameObject.GetComponent<PlayerShooting>().enabled = false;
         Animator anim = GetComponent<Animator>();
         if (anim == null)
         {
-            
             Destroy(gameObject);
             var move = GetComponent<PlayerLaneMovement>();
             string winnerPlayer = "1";
