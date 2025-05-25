@@ -19,6 +19,10 @@ public class PlayerShooting : MonoBehaviour
 
     private ReloadSystem reloadSystem;
 
+    public AudioClip shootSound;
+    public AudioClip inputEnabledSound; 
+    private AudioSource audioSource;
+
     void Start()
     {
         reloadSystem = GetComponent<ReloadSystem>();
@@ -34,6 +38,12 @@ public class PlayerShooting : MonoBehaviour
         {
             keyboardKey = KeyCode.Mouse0;
             shootDirection = Vector3.right;
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
 
@@ -69,6 +79,11 @@ public class PlayerShooting : MonoBehaviour
             bulletComp.direction = firePoint.right;
         }
 
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
+
         reloadSystem.ConsumeAmmo();
     }
 
@@ -76,16 +91,20 @@ public class PlayerShooting : MonoBehaviour
     {
         Destroy(gameObject);
 
-        string winnerPlayer = playerNumber ==  "1" ? "2" : "1";
+        string winnerPlayer = playerNumber == "1" ? "2" : "1";
 
-        //Vittoria + blocco gioco
-        GameManager.Instance.DeclareVictory("Player"+ winnerPlayer);
+        GameManager.Instance.DeclareVictory("Player" + winnerPlayer);
     }
 
     IEnumerator EnableInput(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
         inputEnable = true;
+
+        
+        if (audioSource != null && inputEnabledSound != null)
+        {
+            audioSource.PlayOneShot(inputEnabledSound);
+        }
     }
 }
-
