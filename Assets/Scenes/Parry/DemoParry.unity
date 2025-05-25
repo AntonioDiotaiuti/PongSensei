@@ -3076,6 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryPanel: {fileID: 562520426}
   victoryText: {fileID: 1288856522}
+  victorySound: {fileID: 8300000, guid: 52684067aebf34a4eb850d39295d0af4, type: 3}
 --- !u!4 &962364011
 Transform:
   m_ObjectHideFlags: 0
@@ -7698,6 +7699,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 84358824931312739, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f753dc859188ae48a313dd70bbd7e66, type: 3}
+    - target: {fileID: 84358824931312739, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: inputEnabledSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
     - target: {fileID: 141907196754731438, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -7906,6 +7915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b885779246b72d489ae6c59fcdb94a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtSound: {fileID: 8300000, guid: bb6075f75562fe14fabe9d2b3d2a48bc, type: 3}
 --- !u!1001 &4617973655923455429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8106,6 +8116,14 @@ PrefabInstance:
       propertyPath: ArenaBounds
       value: 
       objectReference: {fileID: 574192157}
+    - target: {fileID: 7548412214123025397, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c3d43a6b30c88464f9a384498ee0fdee, type: 3}
+    - target: {fileID: 7548412214123025397, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+      propertyPath: inputEnabledSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
     - target: {fileID: 7668364371020698538, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_Icon
       value: 
@@ -8213,6 +8231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b885779246b72d489ae6c59fcdb94a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtSound: {fileID: 8300000, guid: bb6075f75562fe14fabe9d2b3d2a48bc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
