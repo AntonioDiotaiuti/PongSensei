@@ -16,11 +16,11 @@ public class PlayerShooting : MonoBehaviour
     private bool triggerHeld = false;
     private string fireAxis;
     private Vector3 shootDirection;
-
+ 
     private ReloadSystem reloadSystem;
 
     public AudioClip shootSound;
-    public AudioClip inputEnabledSound; 
+    
     private AudioSource audioSource;
 
     void Start()
@@ -102,9 +102,6 @@ public class PlayerShooting : MonoBehaviour
         inputEnable = true;
 
         
-        if (audioSource != null && inputEnabledSound != null)
-        {
-            audioSource.PlayOneShot(inputEnabledSound);
-        }
+       
     }
 }

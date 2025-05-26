@@ -5,12 +5,16 @@ using UnityEngine.UI;
 public class ReloadSystem : MonoBehaviour
 {
     public PlayerLaneMovement MovementComp;
-    public static event Action<string> OnPlayerShot; // Evento per segnalare il colpo sparato
+    public static event Action<string> OnPlayerShot;
 
     [Header("Impostazioni Giocatore")]
     [SerializeField] private string playerNumber = "1";
     [SerializeField] private float reloadTime = 2f;
     [SerializeField] private Image reloadBar;
+
+    [Header("Audio")]
+    public AudioClip reloadSound;
+    private AudioSource audioSource;
 
     private float reloadTimer = 0f;
     private bool hasAmmo = true;
@@ -21,12 +25,18 @@ public class ReloadSystem : MonoBehaviour
 
     private void Awake()
     {
-        MovementComp.OnMovementUpdate += OnMovementUpdate;
+        if (MovementComp != null)
+            MovementComp.OnMovementUpdate += OnMovementUpdate;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     private void OnDestroy()
     {
-        MovementComp.OnMovementUpdate -= OnMovementUpdate;
+        if (MovementComp != null)
+            MovementComp.OnMovementUpdate -= OnMovementUpdate;
     }
 
     void Start()
@@ -52,7 +62,7 @@ public class ReloadSystem : MonoBehaviour
 
                 if (reloadTimer >= reloadTime)
                 {
-                    Reload();
+                    Reload(); // Il suono viene gestito dentro Reload()
                 }
             }
         }
@@ -68,8 +78,6 @@ public class ReloadSystem : MonoBehaviour
     {
         hasAmmo = false;
         reloadBar.fillAmount = 0f;
-
-        // Notifica che il giocatore ha sparato
         OnPlayerShot?.Invoke(playerNumber);
     }
 
@@ -83,6 +91,12 @@ public class ReloadSystem : MonoBehaviour
         hasAmmo = true;
         reloadTimer = 0f;
         reloadBar.fillAmount = 1f;
+
+        // Suono del reload
+        if (audioSource != null && reloadSound != null)
+        {
+            audioSource.PlayOneShot(reloadSound);
+        }
     }
 
     private void OnMovementUpdate(bool moving)
@@ -99,9 +113,8 @@ public class ReloadSystem : MonoBehaviour
         ReloadItem reloadItem = other.GetComponent<ReloadItem>();
         if (reloadItem != null && !hasAmmo)
         {
-            Reload();
+            Reload(); // Anche qui il suono parte automaticamente
             Destroy(reloadItem.gameObject);
         }
     }
 }
-

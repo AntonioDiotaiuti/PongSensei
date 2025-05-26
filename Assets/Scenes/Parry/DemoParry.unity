@@ -7706,7 +7706,7 @@ PrefabInstance:
     - target: {fileID: 84358824931312739, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: inputEnabledSound
       value: 
-      objectReference: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
+      objectReference: {fileID: 8300000, guid: 2b1afe925dee49f43942fd6840e31598, type: 3}
     - target: {fileID: 141907196754731438, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -7810,6 +7810,10 @@ PrefabInstance:
       propertyPath: reloadBar
       value: 
       objectReference: {fileID: 1494909029}
+    - target: {fileID: 5620933072001245575, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
     - target: {fileID: 6113289645248795119, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_Icon
       value: 
@@ -8121,9 +8125,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: c3d43a6b30c88464f9a384498ee0fdee, type: 3}
     - target: {fileID: 7548412214123025397, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+      propertyPath: inputEnable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548412214123025397, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: inputEnabledSound
       value: 
-      objectReference: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
+      objectReference: {fileID: 8300000, guid: 2b1afe925dee49f43942fd6840e31598, type: 3}
     - target: {fileID: 7668364371020698538, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_Icon
       value: 
@@ -8168,6 +8176,10 @@ PrefabInstance:
       propertyPath: reloadBar
       value: 
       objectReference: {fileID: 1682748387}
+    - target: {fileID: 8646686425954526010, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+      propertyPath: reloadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
     - target: {fileID: 8691919158155611855, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_FlipX
       value: 1
