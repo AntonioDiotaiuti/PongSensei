@@ -9,17 +9,33 @@ public class GameManager : MonoBehaviour
     public GameObject victoryPanel;
     public TextMeshProUGUI victoryText;
 
+    public AudioClip victorySound; // assegna il suono da Inspector
+    private AudioSource audioSource;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     public void DeclareVictory(string winner)
     {
+        Debug.Log("sfsdg");
         Time.timeScale = 0f; // blocca il gioco
         victoryPanel.SetActive(true);
         victoryText.text = winner + " ha vinto!";
+
+        // Suona l'audio di vittoria
+        if (victorySound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(victorySound);
+        }
     }
 
     // Questo viene chiamato dal bottone

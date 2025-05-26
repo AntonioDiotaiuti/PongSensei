@@ -11,6 +11,8 @@ TagManager:
   - MapAmmo
   - Ammo2
   - Parry2
+  - Proiettile
+  - ArenaBounds
   layers:
   - Default
   - TransparentFX
