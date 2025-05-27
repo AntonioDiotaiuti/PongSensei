@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barropoly_0: -6652556699307630217
+      barropoly_1: -8216364299627765467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
