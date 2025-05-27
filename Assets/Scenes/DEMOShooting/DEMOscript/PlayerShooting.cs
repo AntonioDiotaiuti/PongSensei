@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,24 +11,22 @@ public class PlayerShooting : MonoBehaviour
 
     [SerializeField] public string playerNumber = "1";
     [SerializeField] private KeyCode keyboardKey = KeyCode.R;
-    
-    
-    
 
     public bool inputEnable = true;
     private bool triggerHeld = false;
     private string fireAxis;
     private Vector3 shootDirection;
- 
+
     private ReloadSystem reloadSystem;
+    private AudioSource audioSource;
+    private Animator animator;
 
     public AudioClip shootSound;
-    
-    private AudioSource audioSource;
 
     void Start()
     {
         reloadSystem = GetComponent<ReloadSystem>();
+        animator = GetComponent<Animator>();
 
         fireAxis = "Fire" + playerNumber;
 
@@ -88,14 +86,28 @@ public class PlayerShooting : MonoBehaviour
         }
 
         reloadSystem.ConsumeAmmo();
+
+        // Attiva animazione di lancio
+        if (animator != null)
+        {
+            animator.SetBool("isThrowing", true);
+            StartCoroutine(ResetThrowAnimation());
+        }
+    }
+
+    IEnumerator ResetThrowAnimation()
+    {
+        yield return new WaitForSeconds(0.3f); // Durata minima dell'animazione
+        if (animator != null)
+        {
+            animator.SetBool("isThrowing", false);
+        }
     }
 
     private void OnDeath()
     {
         Destroy(gameObject);
-
         string winnercolor = playerNumber == "1" ? "Blue" : "Red";
-
         GameManager.Instance.DeclareVictory(winnercolor);
     }
 
@@ -103,8 +115,5 @@ public class PlayerShooting : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToWait);
         inputEnable = true;
-
-        
-       
     }
 }
