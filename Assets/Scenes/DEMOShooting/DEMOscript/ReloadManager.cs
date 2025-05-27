@@ -7,7 +7,7 @@ public class ReloadManager : MonoBehaviour
 
 	private bool player1Shot = false;
 	private bool player2Shot = false;
-	private bool itemSpawned = false;
+	private bool firstSpawnDone = false;
 
 	private void OnEnable()
 	{
@@ -21,26 +21,19 @@ public class ReloadManager : MonoBehaviour
 
 	private void OnPlayerShot(string playerNumber)
 	{
-		if (playerNumber == "1")
-		{
-			player1Shot = true;
-		}
-		else if (playerNumber == "2")
-		{
-			player2Shot = true;
-		}
+		if (playerNumber == "1") player1Shot = true;
+		else if (playerNumber == "2") player2Shot = true;
 
-		// Se non è ancora stato spawnato
-		if (!itemSpawned && (player1Shot || player2Shot))
+		if (ReloadItemExistsInScene()) return;
+
+		if (!firstSpawnDone && (player1Shot || player2Shot))
 		{
 			SpawnReloadItem();
-			itemSpawned = true;
+			firstSpawnDone = true;
 		}
-		// Dopo il primo spawn, spawna solo quando entrambi hanno sparato almeno una volta
-		else if (player1Shot && player2Shot)
+		else if (firstSpawnDone && player1Shot && player2Shot)
 		{
 			SpawnReloadItem();
-			itemSpawned = true;
 			player1Shot = false;
 			player2Shot = false;
 		}
@@ -49,5 +42,10 @@ public class ReloadManager : MonoBehaviour
 	private void SpawnReloadItem()
 	{
 		Instantiate(reloadItemPrefab, spawnPoint.position, Quaternion.identity);
+	}
+
+	private bool ReloadItemExistsInScene()
+	{
+		return GameObject.FindWithTag("MapAmmo") != null;
 	}
 }
