@@ -9,12 +9,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_Size.x
+      value: 4.8859625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_Size.y
+      value: 4.6572804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.21459866
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.122626066
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.3333334
+      value: 13.95
       objectReference: {fileID: 0}
     - target: {fileID: 2631217087362199178, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.3333334
+      value: 13.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737859710482448643, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737859710482448643, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3737859710482448643, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 7858392742920922024, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3291391736936066149, guid: d13ba7359672e0c4ab83953e541d4676, type: 3}
+      objectReference: {fileID: 7556205386685130292, guid: 402bc8ffe6c6dde44af6b77b2f0a053c, type: 3}
     - target: {fileID: 8384539621798479726, guid: cb28b0b860c2cfb4181d3fa7c4e5d133, type: 3}
       propertyPath: m_Name
       value: Ricarica Variant
