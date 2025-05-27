@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: ColliderParry
   m_TagString: Parry
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3269117289318102355}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08848798, y: 0.1839591, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1839591, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,7 +49,8 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"BulleScript","value":null,"typeHandle":{"Identification":"Bullet,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Player1","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Tag","value":{"$content":"Player2","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 6113289645248795119}
 --- !u!114 &69735914415151055
@@ -102,7 +103,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.0551691, y: -0.2447232}
+  m_Offset: {x: 0.3723161, y: 0.040138483}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -112,7 +113,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.2, y: 2.1}
+  m_Size: {x: 0.7446322, y: 1.080277}
   m_EdgeRadius: 0
 --- !u!1 &5462801838877778596
 GameObject:
@@ -126,7 +127,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint 1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -139,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 5462801838877778596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: 0, z: 0}
+  m_LocalPosition: {x: 0.85, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,10 +163,12 @@ GameObject:
   - component: {fileID: 7844424933577672095}
   - component: {fileID: 4428576447115734337}
   - component: {fileID: 5620933072001245575}
+  - component: {fileID: 3470102097763841557}
+  - component: {fileID: 669601215164789582}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player1
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -179,7 +182,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.79366, y: 0.042329103, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3472720245074342731}
@@ -203,6 +206,7 @@ MonoBehaviour:
   laneOffset: 2
   currentLane: 1
   horizontalSpeed: 5
+  isMoving: 0
 --- !u!212 &141907196754731438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -247,7 +251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02b4d296ebe98d24596d37f23be4c610, type: 3}
+  m_Sprite: {fileID: 815424164945274260, guid: c315127b56eb54147af20bb14065a6ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -277,6 +281,7 @@ MonoBehaviour:
   playerNumber: 1
   keyboardKey: 114
   inputEnable: 1
+  shootSound: {fileID: 8300000, guid: 1f753dc859188ae48a313dd70bbd7e66, type: 3}
 --- !u!58 &241842000038536979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -311,8 +316,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.805
+  m_Offset: {x: -0.28769803, y: 0.44238743}
+  m_Radius: 0.2962207
 --- !u!50 &890466853578281107
 Rigidbody2D:
   serializedVersion: 5
@@ -355,9 +360,17 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ColliderParry","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ScriptShooting","value":null,"typeHandle":{"Identification":"PlayerShooting,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"isMoving","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PlayerAttacked","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"deathComp","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"death,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Player1","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PArrySound1","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
+      UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3269117289318102355}
+    - {fileID: 669601215164789582}
+    - {fileID: 6113289645248795119}
+    - {fileID: 8300000, guid: 3998f50cf210c1748af0d55509f3d277, type: 3}
 --- !u!114 &4428576447115734337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,3 +403,39 @@ MonoBehaviour:
   playerNumber: 1
   reloadTime: 2
   reloadBar: {fileID: 0}
+  reloadSound: {fileID: 8300000, guid: 9d12f43d9f7068f47be80b7e61dcd4f3, type: 3}
+--- !u!95 &3470102097763841557
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113289645248795119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce662446112b12042b5b820d148f6227, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &669601215164789582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113289645248795119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b885779246b72d489ae6c59fcdb94a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hurtSound: {fileID: 8300000, guid: bb6075f75562fe14fabe9d2b3d2a48bc, type: 3}

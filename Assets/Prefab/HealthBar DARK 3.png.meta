@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: a708f070a003c814a9843115e3015505
+guid: 91ed34b4c16e49f488a8246da60bc0a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1878985821609750234
-    second: HealthBar DARK 1_0
-  - first:
-      213: 1277713152904004532
-    second: HealthBar DARK 1_1
-  - first:
-      213: -7189838309113481198
-    second: HealthBar DARK 1_2
+      213: 5647642825903598635
+    second: HealthBar DARK 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HealthBar DARK 1_0
+      name: HealthBar DARK 3_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 100
-        width: 58
-        height: 6
+        x: 0
+        y: 0
+        width: 76
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ade6b0346af731a10800000000000000
-      internalID: 1878985821609750234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HealthBar DARK 1_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 70
-        width: 78
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b300bbc7595bb110800000000000000
-      internalID: 1277713152904004532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HealthBar DARK 1_2
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 89
-        width: 58
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 218bbc8b620983c90800000000000000
-      internalID: -7189838309113481198
+      spriteID: b2c64484a35706e40800000000000000
+      internalID: 5647642825903598635
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HealthBar DARK 1_0: 1878985821609750234
-      HealthBar DARK 1_1: 1277713152904004532
-      HealthBar DARK 1_2: -7189838309113481198
+      HealthBar DARK 3_0: 5647642825903598635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
