@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject victoryPanel;
     public TextMeshProUGUI victoryText;
 
-    public AudioClip victorySound; // assegna il suono da Inspector
+    public AudioClip victorySound;
     private AudioSource audioSource;
 
     private void Awake()
