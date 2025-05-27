@@ -6493,11 +6493,12 @@ PrefabInstance:
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"deathComp","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"death,
         Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Player1","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PArrySound1","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
-        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MovementComp","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"PlayerLaneMovement,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 7844424933577672095, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7844424933577672095, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: '_data._objectReferences.Array.data[1]'
@@ -6511,10 +6512,18 @@ PrefabInstance:
       propertyPath: '_data._objectReferences.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 3998f50cf210c1748af0d55509f3d277, type: 3}
+    - target: {fileID: 7844424933577672095, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2547247647363101967}
     - target: {fileID: 8264281530836250325, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: ArenaBounds
       value: 
       objectReference: {fileID: 574192157}
+    - target: {fileID: 8264281530836250325, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+      propertyPath: horizontalSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9092737918951010139, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
       propertyPath: m_Size.x
       value: 0.7446322
@@ -6587,6 +6596,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtSound: {fileID: 8300000, guid: bb6075f75562fe14fabe9d2b3d2a48bc, type: 3}
+--- !u!114 &2547247647363101967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8264281530836250325, guid: 2d74b1d5d56dfdc48bb66752f6c160e9, type: 3}
+  m_PrefabInstance: {fileID: 2547247647363101948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547247647363101949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccf9fb0686b3c34290a08a830198929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4617973655923455429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6750,11 +6770,12 @@ PrefabInstance:
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"deathComp","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"death,
         Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Player2","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"AudioListenerTelecamera","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
-        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"MovementComp","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"PlayerLaneMovement,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 3691266321418398878, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3691266321418398878, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: '_data._objectReferences.Array.data[1]'
@@ -6768,6 +6789,10 @@ PrefabInstance:
       propertyPath: '_data._objectReferences.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: bded01ff8b82d014484553ad7544b0ba, type: 3}
+    - target: {fileID: 3691266321418398878, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[4]'
+      value: 
+      objectReference: {fileID: 6800713525720522632}
     - target: {fileID: 4594315789103833561, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
       propertyPath: m_Name
       value: Blue
@@ -6886,7 +6911,7 @@ Animator:
   m_GameObject: {fileID: 6800713525720522607}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8a8e21e71adaf1e47b7a896717793695, type: 2}
+  m_Controller: {fileID: 22100000, guid: ee9c0c3d5fbf468499ff1c015db61d64, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6916,6 +6941,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtSound: {fileID: 8300000, guid: bb6075f75562fe14fabe9d2b3d2a48bc, type: 3}
+--- !u!114 &6800713525720522632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5738866467484672733, guid: 5f1e8f62e9df24c41b1149e1f4469796, type: 3}
+  m_PrefabInstance: {fileID: 6800713525720522606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6800713525720522607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccf9fb0686b3c34290a08a830198929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

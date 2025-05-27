@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerLaneMovement : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerLaneMovement : MonoBehaviour
     public int currentLane = 1;
 
     [Header("Movimento Orizzontale (fluido)")]
-    [SerializeField] private float horizontalSpeed = 5f;
+    [SerializeField] public float horizontalSpeed = 5f;
 
     private Vector3 startPosition;
     private bool verticalAxisInUse = false;
@@ -19,6 +20,8 @@ public class PlayerLaneMovement : MonoBehaviour
 
     public bool isMoving = false;
 
+    public bool InputAllowed = true;
+    public float MovementCooldown = 0.2f;
     private Animator animator;
 
     public delegate void MovementEvent(bool moving);
@@ -36,8 +39,19 @@ public class PlayerLaneMovement : MonoBehaviour
 
     void Update()
     {
-        HandleVerticalInput();
-        HandleHorizontalInput();
+        if (InputAllowed)
+        {
+            HandleVerticalInput();
+            HandleHorizontalInput();
+        } else
+        {
+            animator.SetBool("isMoving", false);
+        }
+    }
+
+    public void AllowInput()
+    {
+        StartCoroutine(AllowInputAsync());
     }
 
     void HandleVerticalInput()
@@ -151,5 +165,12 @@ public class PlayerLaneMovement : MonoBehaviour
     private bool IsPlayerOne()
     {
         return PlayerNumber == "1";
+    }
+
+    private IEnumerator AllowInputAsync()
+    {
+        yield return new WaitForSeconds(MovementCooldown);
+
+        InputAllowed = true;
     }
 }
