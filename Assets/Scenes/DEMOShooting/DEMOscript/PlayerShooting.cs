@@ -9,8 +9,11 @@ public class PlayerShooting : MonoBehaviour
     public float projectileSpeed = 10f;
     public float CooldownInput = 0.3f;
 
-    [SerializeField] private string playerNumber = "1";
+    [SerializeField] public string playerNumber = "1";
     [SerializeField] private KeyCode keyboardKey = KeyCode.R;
+    
+    
+    
 
     public bool inputEnable = true;
     private bool triggerHeld = false;
@@ -91,9 +94,9 @@ public class PlayerShooting : MonoBehaviour
     {
         Destroy(gameObject);
 
-        string winnerPlayer = playerNumber == "1" ? "2" : "1";
+        string winnercolor = playerNumber == "1" ? "Blue" : "Red";
 
-        GameManager.Instance.DeclareVictory("Player" + winnerPlayer);
+        GameManager.Instance.DeclareVictory(winnercolor);
     }
 
     IEnumerator EnableInput(float timeToWait)

@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("sfsdg");
         Time.timeScale = 0f; // blocca il gioco
         victoryPanel.SetActive(true);
-        victoryText.text = winner + " ha vinto!";
+        victoryText.text = winner;
 
         // Suona l'audio di vittoria
         if (victorySound != null && audioSource != null)
