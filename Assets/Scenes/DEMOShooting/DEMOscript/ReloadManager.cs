@@ -41,7 +41,7 @@ public class ReloadManager : MonoBehaviour
 
 	private void SpawnReloadItem()
 	{
-		Instantiate(reloadItemPrefab, spawnPoint.position, Quaternion.identity);
+		Instantiate(reloadItemPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
 	}
 
 	private bool ReloadItemExistsInScene()
