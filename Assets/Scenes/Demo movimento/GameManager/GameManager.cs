@@ -27,11 +27,17 @@ public class GameManager : MonoBehaviour
     public void DeclareVictory(string winner)
     {
         Debug.Log("sfsdg");
-        Time.timeScale = 0f; // blocca il gioco
+        Time.timeScale = 0f; 
         victoryPanel.SetActive(true);
-        victoryText.text = winner;
+        string colorHex = "#FFFFFF"; 
 
-        // Suona l'audio di vittoria
+        if (winner == "Red") colorHex = "#FF0000";       
+        else if (winner == "Blue") colorHex = "#0000FF"; 
+
+        victoryText.text = $"<color={colorHex}>{winner}</color> Wins!";
+
+
+        
         if (victorySound != null && audioSource != null)
         {
             audioSource.PlayOneShot(victorySound);

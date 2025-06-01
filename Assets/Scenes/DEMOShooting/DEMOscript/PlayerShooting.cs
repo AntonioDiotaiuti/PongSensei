@@ -50,7 +50,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (!inputEnable) return;
+        if (!inputEnable || Pausamenu.GameisPaused) return;
 
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);
         float triggerValue = Input.GetAxis(fireAxis);
@@ -87,7 +87,6 @@ public class PlayerShooting : MonoBehaviour
 
         reloadSystem.ConsumeAmmo();
 
-        // Attiva animazione di lancio
         if (animator != null)
         {
             animator.SetBool("isThrowing", true);
@@ -97,7 +96,7 @@ public class PlayerShooting : MonoBehaviour
 
     IEnumerator ResetThrowAnimation()
     {
-        yield return new WaitForSeconds(0.3f); // Durata minima dell'animazione
+        yield return new WaitForSeconds(0.3f);
         if (animator != null)
         {
             animator.SetBool("isThrowing", false);
@@ -117,3 +116,4 @@ public class PlayerShooting : MonoBehaviour
         inputEnable = true;
     }
 }
+
