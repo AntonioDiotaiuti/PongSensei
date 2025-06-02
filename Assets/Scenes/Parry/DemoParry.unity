@@ -2877,6 +2877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   victoryPanel: {fileID: 562520426}
   victoryText: {fileID: 1288856522}
+  firstSelectedButton: {fileID: 604756463}
   victorySound: {fileID: 8300000, guid: 52684067aebf34a4eb850d39295d0af4, type: 3}
 --- !u!4 &962364011
 Transform:
@@ -3873,7 +3874,7 @@ GameObject:
   - component: {fileID: 1239292185}
   - component: {fileID: 1239292184}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: EventSystem1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
