@@ -67,7 +67,7 @@ public class PlayerShooting : MonoBehaviour
         if (!inputEnable || Pausamenu.GameisPaused) return;
 
         // Blocca sparo se lo schema comandi è ancora attivo
-        if (GameManager.Instance != null && GameManager.Instance.IsWaitingForInput())
+        if (GameManager.Instance != null && GameManager.Instance.IsWaitingForInput)
             return;
 
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);

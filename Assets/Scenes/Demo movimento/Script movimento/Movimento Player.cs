@@ -34,19 +34,22 @@ public class PlayerLaneMovement : MonoBehaviour
         startPosition = transform.position;
         UpdateLanePosition();
 
-        animator = GetComponent<Animator>(); // animator
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (InputAllowed)
+        // Blocca input se non permesso, in pausa o in attesa di input schema comandi
+        if (!InputAllowed || Pausamenu.GameisPaused ||
+            (GameManager.Instance != null && GameManager.Instance.IsWaitingForInput))
         {
-            HandleVerticalInput();
-            HandleHorizontalInput();
-        } else
-        {
-            animator.SetBool("isMoving", false);
+            if (animator != null)
+                animator.SetBool("isMoving", false);
+            return;
         }
+
+        HandleVerticalInput();
+        HandleHorizontalInput();
     }
 
     public void AllowInput()
@@ -80,11 +83,8 @@ public class PlayerLaneMovement : MonoBehaviour
                 UpdateLanePosition();
                 verticalAxisInUse = true;
 
-                // DASH 
                 if (animator != null)
-                {
                     animator.SetTrigger("isDashing");
-                }
             }
             else if ((moveDown || verticalInput < -0.5f) && currentLane > 0)
             {
@@ -92,11 +92,8 @@ public class PlayerLaneMovement : MonoBehaviour
                 UpdateLanePosition();
                 verticalAxisInUse = true;
 
-                // DASH
                 if (animator != null)
-                {
                     animator.SetTrigger("isDashing");
-                }
             }
             else
             {
@@ -110,7 +107,6 @@ public class PlayerLaneMovement : MonoBehaviour
         }
     }
 
-
     void HandleHorizontalInput()
     {
         float horizontalInput = 0f;
@@ -122,7 +118,6 @@ public class PlayerLaneMovement : MonoBehaviour
 
             if (pressD) horizontalInput = 1f;
             else if (pressA) horizontalInput = -1f;
-
         }
         else
         {
@@ -170,7 +165,6 @@ public class PlayerLaneMovement : MonoBehaviour
     private IEnumerator AllowInputAsync()
     {
         yield return new WaitForSeconds(MovementCooldown);
-
         InputAllowed = true;
     }
 }

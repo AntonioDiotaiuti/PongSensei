@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     private AudioSource audioSource;
 
     private bool waitingForInput = false;
+
+    // Proprietà pubblica solo lettura
+    public bool IsWaitingForInput => waitingForInput;
+
     private static bool hasStarted = false;
 
     private void Awake()
@@ -63,14 +67,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ResumeGameNextFrame()
     {
-        yield return null; // attende un frame
+        yield return null; // aspetta 1 frame per evitare input accidentali
         Time.timeScale = 1f;
         waitingForInput = false;
-    }
-
-    public bool IsWaitingForInput()
-    {
-        return waitingForInput;
     }
 
     public void DeclareVictory(string winner)
@@ -98,9 +97,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        // Non resettiamo hasStarted → lo schema non riappare
+        // Non resettiamo hasStarted, quindi lo schema comandi non riappare
     }
 }
-
-
-
