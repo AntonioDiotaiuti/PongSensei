@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 402bc8ffe6c6dde44af6b77b2f0a053c
+guid: e8ea060fd981df148b744c94be6c4d2a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7556205386685130292
-    second: Shuriken pronta 2_0
+      213: -8904459987546633836
+    second: W401-13_0
+  - first:
+      213: -5536194356905481983
+    second: W401-13_1
+  - first:
+      213: 2680612143106454247
+    second: W401-13_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shuriken pronta 2_0
+      name: W401-13_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1395
-        height: 1395
+        x: 287
+        y: 271
+        width: 114
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 436a243c3c80dd860800000000000000
-      internalID: 7556205386685130292
+      spriteID: 4998a95b1d00d6480800000000000000
+      internalID: -8904459987546633836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W401-13_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 223
+        width: 98
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109602d709c7b23b0800000000000000
+      internalID: -5536194356905481983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W401-13_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 175
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2757aaa82733520800000000000000
+      internalID: 2680612143106454247
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1c85d0e8eb2214c42b6cf3de29d3051d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Shuriken pronta 2_0: 7556205386685130292
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

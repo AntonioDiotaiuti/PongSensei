@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 402bc8ffe6c6dde44af6b77b2f0a053c
+guid: 832b30912d6b40544beb06d93875d02c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7556205386685130292
-    second: Shuriken pronta 2_0
+      213: -234965217223864807
+    second: W401-10_0
+  - first:
+      213: -6016965955916758209
+    second: W401-10_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shuriken pronta 2_0
+      name: W401-10_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1395
-        height: 1395
+        x: 303
+        y: 207
+        width: 50
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 436a243c3c80dd860800000000000000
-      internalID: 7556205386685130292
+      spriteID: 91e8ccc316c3dbcf0800000000000000
+      internalID: -234965217223864807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W401-10_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 175
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3386f3a7517f7ca0800000000000000
+      internalID: -6016965955916758209
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1c85d0e8eb2214c42b6cf3de29d3051d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Shuriken pronta 2_0: 7556205386685130292
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

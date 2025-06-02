@@ -846,7 +846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &214112326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2528,7 +2528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &562520427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4725,6 +4725,8 @@ MonoBehaviour:
   victoryText: {fileID: 1288856522}
   firstSelectedButton: {fileID: 604756463}
   controlsPanel: {fileID: 578526267}
+  redVictorySound: {fileID: 8300000, guid: 5adf9fa2f3941c241a15ae618d266f00, type: 3}
+  blueVictorySound: {fileID: 8300000, guid: 3f9eb0f9da5a00e4aa5843e63cb3aa0b, type: 3}
   victorySound: {fileID: 8300000, guid: 52684067aebf34a4eb850d39295d0af4, type: 3}
 --- !u!4 &962364011
 Transform:

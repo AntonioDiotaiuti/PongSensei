@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
     public GameObject controlsPanel;
 
     [Header("Audio")]
-    public AudioClip victorySound;
+    public AudioClip redVictorySound;
+    public AudioClip blueVictorySound;
+    public AudioClip victorySound; // opzionale suono generico
     private AudioSource audioSource;
 
     private bool waitingForInput = false;
@@ -83,8 +85,19 @@ public class GameManager : MonoBehaviour
 
         victoryText.text = $"<color={colorHex}>{winner}</color>";
 
-        if (victorySound != null)
+        // Riproduce il suono corretto
+        if (winner == "Red" && redVictorySound != null)
+        {
+            audioSource.PlayOneShot(redVictorySound);
+        }
+        else if (winner == "Blue" && blueVictorySound != null)
+        {
+            audioSource.PlayOneShot(blueVictorySound);
+        }
+        else if (victorySound != null) // fallback opzionale
+        {
             audioSource.PlayOneShot(victorySound);
+        }
 
         if (firstSelectedButton != null)
         {
