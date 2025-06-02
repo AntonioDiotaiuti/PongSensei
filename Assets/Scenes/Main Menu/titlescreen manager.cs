@@ -140,7 +140,7 @@ public class IntroManager : MonoBehaviour
     {
         if (canPressKey && Input.anyKeyDown && Application.isFocused)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("DemoParry");
         }
     }
 }

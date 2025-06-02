@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void DeclareVictory(string winner)
     {
-        Debug.Log("sfsdg");
+        
         Time.timeScale = 0f; 
         victoryPanel.SetActive(true);
         string colorHex = "#FFFFFF"; 
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         if (winner == "Red") colorHex = "#FF0000";       
         else if (winner == "Blue") colorHex = "#0000FF"; 
 
-        victoryText.text = $"<color={colorHex}>{winner}</color> Wins!";
+        victoryText.text = $"<color={colorHex}>{winner}</color>";
 
 
         
