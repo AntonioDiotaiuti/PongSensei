@@ -31,13 +31,13 @@ public class FlipPlayer : MonoBehaviour
     {
         if (Player1 != null && Player2 != null)
         {
-            Debug.Log("here");
+            
             float player1X = Player1.transform.position.x;
             float player2X = Player2.transform.position.x;
 
             if (player1X < player2X)
             {
-                Debug.Log("here - 2");
+                
                 Player1.flipX = false;
                 Side1 = PlayerSide.Left;
                 var offset1 = ColliderParry1.offset;
