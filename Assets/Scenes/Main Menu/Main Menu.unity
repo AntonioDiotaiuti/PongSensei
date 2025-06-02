@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c70c55a3ba0284687944448eaa6a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introClip: {fileID: 8300000, guid: db389692be9fca6449d73f807ba12b0a, type: 3}
+  introClip: {fileID: 8300000, guid: b0280658585da954a9a29e2008dcff02, type: 3}
   blackScreen: {fileID: 1985455619}
   titleScreenImage: {fileID: 312621461}
   teamText: {fileID: 389903299}

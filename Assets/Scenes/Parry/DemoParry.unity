@@ -1690,8 +1690,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3998f50cf210c1748af0d55509f3d277, type: 3}
-  m_Resource: {fileID: 8300000, guid: 3998f50cf210c1748af0d55509f3d277, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1be768dd2f88b2a46a96be9855777e5a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1be768dd2f88b2a46a96be9855777e5a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -5939,7 +5939,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: c473020c693964042bd4fa40f8bcbea4, type: 2}
+    - {fileID: 11400000, guid: 694099cdcaf4d7a44adf35643087ee38, type: 2}
 --- !u!82 &1199014493
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9852,10 +9852,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bded01ff8b82d014484553ad7544b0ba, type: 3}
-  m_Resource: {fileID: 8300000, guid: bded01ff8b82d014484553ad7544b0ba, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d4a55a06b6564d54aad8fbf23f0b4e3c, type: 3}
+  m_Resource: {fileID: 8300000, guid: d4a55a06b6564d54aad8fbf23f0b4e3c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.385
   m_Pitch: 1
   Loop: 0
   Mute: 0
