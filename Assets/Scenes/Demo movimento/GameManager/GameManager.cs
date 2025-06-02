@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using TMPro;
-using UnityEngine.SceneManagement;
+﻿using TMPro;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,11 +10,19 @@ public class GameManager : MonoBehaviour
     [Header("Victory UI")]
     public GameObject victoryPanel;
     public TextMeshProUGUI victoryText;
-    public GameObject firstSelectedButton; // ← assegna qui il bottone da selezionare
+    public GameObject firstSelectedButton;
+
+    [Header("Controls Screen")]
+    public GameObject controlsPanel;
 
     [Header("Audio")]
     public AudioClip victorySound;
     private AudioSource audioSource;
+
+    private bool waitingForInput = false;
+
+    // STATIC FLAG: resta tra ricariche di scena
+    private static bool hasStarted = false;
 
     private void Awake()
     {
@@ -24,8 +31,35 @@ public class GameManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
-        {
             audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        if (!hasStarted)
+        {
+            ShowControls();
+            hasStarted = true;
+        }
+    }
+
+    private void ShowControls()
+    {
+        if (controlsPanel != null)
+        {
+            controlsPanel.SetActive(true);
+            Time.timeScale = 0f;
+            waitingForInput = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (waitingForInput && Input.anyKeyDown)
+        {
+            controlsPanel.SetActive(false);
+            Time.timeScale = 1f;
+            waitingForInput = false;
         }
     }
 
@@ -40,15 +74,12 @@ public class GameManager : MonoBehaviour
 
         victoryText.text = $"<color={colorHex}>{winner}</color>";
 
-        if (victorySound != null && audioSource != null)
-        {
+        if (victorySound != null)
             audioSource.PlayOneShot(victorySound);
-        }
 
-        // Seleziona il bottone per controller/keyboard
         if (firstSelectedButton != null)
         {
-            EventSystem.current.SetSelectedGameObject(null); // reset selezione
+            EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(firstSelectedButton);
         }
     }
@@ -56,7 +87,8 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // NON resettiamo hasStarted → lo schema comandi non riappare
     }
 }
+

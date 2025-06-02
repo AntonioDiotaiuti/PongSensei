@@ -20,8 +20,22 @@ public class PlayerShooting : MonoBehaviour
     private ReloadSystem reloadSystem;
     private AudioSource audioSource;
     private Animator animator;
+    public bool MenuActive;
 
     public AudioClip shootSound;
+    private void Awake()
+    {
+        var Menu = GameObject.FindAnyObjectByType<ControlSchemeManager>();
+        if (Menu != null)
+        {
+            Menu.OnSetMenu += GetMenu;
+        }
+    }
+    public void GetMenu(bool Menu)
+    {
+        Menu = MenuActive;
+
+    }
 
     void Start()
     {
@@ -75,9 +89,11 @@ public class PlayerShooting : MonoBehaviour
         GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
         var bulletComp = bullet.GetComponent<Bullet>();
-        if (bulletComp != null)
+       
+        if (bulletComp != null && !MenuActive) 
         {
             bulletComp.direction = firePoint.right;
+
         }
 
         if (shootSound != null && audioSource != null)
