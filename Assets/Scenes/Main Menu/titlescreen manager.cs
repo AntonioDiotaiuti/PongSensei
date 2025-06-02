@@ -138,9 +138,10 @@ public class IntroManager : MonoBehaviour
 
     void Update()
     {
-        if (canPressKey && Input.anyKeyDown)
+        if (canPressKey && Input.anyKeyDown && Application.isFocused)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("DemoParry");
         }
     }
 }
+
