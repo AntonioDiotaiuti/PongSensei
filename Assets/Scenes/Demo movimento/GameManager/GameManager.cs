@@ -1,7 +1,8 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,8 +21,6 @@ public class GameManager : MonoBehaviour
     private AudioSource audioSource;
 
     private bool waitingForInput = false;
-
-    // STATIC FLAG: resta tra ricariche di scena
     private static bool hasStarted = false;
 
     private void Awake()
@@ -58,9 +57,20 @@ public class GameManager : MonoBehaviour
         if (waitingForInput && Input.anyKeyDown)
         {
             controlsPanel.SetActive(false);
-            Time.timeScale = 1f;
-            waitingForInput = false;
+            StartCoroutine(ResumeGameNextFrame());
         }
+    }
+
+    private IEnumerator ResumeGameNextFrame()
+    {
+        yield return null; // attende un frame
+        Time.timeScale = 1f;
+        waitingForInput = false;
+    }
+
+    public bool IsWaitingForInput()
+    {
+        return waitingForInput;
     }
 
     public void DeclareVictory(string winner)
@@ -88,7 +98,9 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        // NON resettiamo hasStarted → lo schema comandi non riappare
+        // Non resettiamo hasStarted → lo schema non riappare
     }
 }
+
+
 

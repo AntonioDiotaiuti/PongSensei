@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Pausamenu : MonoBehaviour
 {
@@ -9,15 +12,48 @@ public class Pausamenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject firstSelectedButton;
 
+    [Header("Colori testo")]
+    public Color normalColor = Color.white;
+    public Color selectedColor = Color.yellow;
+
+    private List<TextMeshProUGUI> buttonTexts = new List<TextMeshProUGUI>();
+
+    private void Start()
+    {
+        // Raccoglie tutti i TextMeshProUGUI dei bottoni nel menu pausa
+        Button[] buttons = pauseMenuUI.GetComponentsInChildren<Button>(true);
+        foreach (var btn in buttons)
+        {
+            TextMeshProUGUI tmp = btn.GetComponentInChildren<TextMeshProUGUI>();
+            if (tmp != null)
+                buttonTexts.Add(tmp);
+        }
+    }
+
     private void Update()
     {
-        // Supporta ESC e Start del controller
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Start"))
         {
             if (GameisPaused)
                 Resume();
             else
                 Pause();
+        }
+
+        if (GameisPaused)
+            UpdateTextHighlighting();
+    }
+
+    void UpdateTextHighlighting()
+    {
+        GameObject current = EventSystem.current.currentSelectedGameObject;
+
+        foreach (var text in buttonTexts)
+        {
+            if (text == null) continue;
+            // Evidenzia se il padre è il selezionato
+            bool isSelected = current != null && text.transform.IsChildOf(current.transform);
+            text.color = isSelected ? selectedColor : normalColor;
         }
     }
 
@@ -26,8 +62,6 @@ public class Pausamenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
-
-        // Rimuove qualsiasi selezione UI residua
         EventSystem.current.SetSelectedGameObject(null);
     }
 
@@ -37,8 +71,7 @@ public class Pausamenu : MonoBehaviour
         Time.timeScale = 0f;
         GameisPaused = true;
 
-        // Seleziona il primo bottone per il controller
-        EventSystem.current.SetSelectedGameObject(null); // reset selezione
+        EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstSelectedButton);
     }
 
@@ -47,4 +80,5 @@ public class Pausamenu : MonoBehaviour
         Application.Quit();
     }
 }
+
 

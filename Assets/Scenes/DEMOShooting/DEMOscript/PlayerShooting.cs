@@ -66,6 +66,10 @@ public class PlayerShooting : MonoBehaviour
     {
         if (!inputEnable || Pausamenu.GameisPaused) return;
 
+        // Blocca sparo se lo schema comandi è ancora attivo
+        if (GameManager.Instance != null && GameManager.Instance.IsWaitingForInput())
+            return;
+
         bool keyboardShoot = Input.GetKeyDown(keyboardKey);
         float triggerValue = Input.GetAxis(fireAxis);
         bool triggerShoot = triggerValue > 0.5f && !triggerHeld;
@@ -83,6 +87,7 @@ public class PlayerShooting : MonoBehaviour
             triggerHeld = false;
         }
     }
+
 
     void Fire()
     {
